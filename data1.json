@@ -1,0 +1,667 @@
+{
+  "name": 1,
+  "size": 32,
+  "rule": "",
+  "responsessum": [
+    {
+      "minimum": 52,
+      "q1": 96.5,
+      "median": 123,
+      "mean": 146.7,
+      "q3": 180,
+      "maximum": 335
+    }
+  ],
+  "children": [
+    {
+      "name": 2,
+      "size": 18,
+      "rule": "cyl < 7",
+      "responsessum": [
+        {
+          "minimum": 52,
+          "q1": 72.25,
+          "median": 101,
+          "mean": 98.06,
+          "q3": 110,
+          "maximum": 175
+        }
+      ],
+      "children": [
+        {
+          "name": 3,
+          "size": 10,
+          "rule": "cyl < 7 & mpg >= 21.45",
+          "responsessum": [
+            {
+              "minimum": 52,
+              "q1": 65.25,
+              "median": 78.5,
+              "mean": 80,
+              "q3": 94.5,
+              "maximum": 113
+            }
+          ],
+          "children": [
+            {
+              "name": 4,
+              "size": 4,
+              "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+              "responsessum": [
+                {
+                  "minimum": 52,
+                  "q1": 61.75,
+                  "median": 65.5,
+                  "mean": 62.25,
+                  "q3": 66,
+                  "maximum": 66
+                }
+              ]
+            },
+            {
+              "name": 5,
+              "size": 6,
+              "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+              "responsessum": [
+                {
+                  "minimum": 62,
+                  "q1": 91.5,
+                  "median": 94,
+                  "mean": 91.83,
+                  "q3": 96.5,
+                  "maximum": 113
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 4,
+          "size": 4,
+          "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "responsessum": [
+            {
+              "minimum": 52,
+              "q1": 61.75,
+              "median": 65.5,
+              "mean": 62.25,
+              "q3": 66,
+              "maximum": 66
+            }
+          ]
+        },
+        {
+          "name": 5,
+          "size": 6,
+          "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "responsessum": [
+            {
+              "minimum": 62,
+              "q1": 91.5,
+              "median": 94,
+              "mean": 91.83,
+              "q3": 96.5,
+              "maximum": 113
+            }
+          ]
+        },
+        {
+          "name": 6,
+          "size": 8,
+          "rule": "cyl < 7 & mpg < 21.45",
+          "responsessum": [
+            {
+              "minimum": 105,
+              "q1": 109.8,
+              "median": 110,
+              "mean": 120.6,
+              "q3": 123,
+              "maximum": 175
+            }
+          ],
+          "children": [
+            {
+              "name": 7,
+              "size": 7,
+              "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+              "responsessum": [
+                {
+                  "minimum": 105,
+                  "q1": 109.5,
+                  "median": 110,
+                  "mean": 112.9,
+                  "q3": 116.5,
+                  "maximum": 123
+                }
+              ]
+            },
+            {
+              "name": 8,
+              "size": 1,
+              "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+              "responsessum": [
+                {
+                  "minimum": 175,
+                  "q1": 175,
+                  "median": 175,
+                  "mean": 175,
+                  "q3": 175,
+                  "maximum": 175
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 7,
+          "size": 7,
+          "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "responsessum": [
+            {
+              "minimum": 105,
+              "q1": 109.5,
+              "median": 110,
+              "mean": 112.9,
+              "q3": 116.5,
+              "maximum": 123
+            }
+          ]
+        },
+        {
+          "name": 8,
+          "size": 1,
+          "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "responsessum": [
+            {
+              "minimum": 175,
+              "q1": 175,
+              "median": 175,
+              "mean": 175,
+              "q3": 175,
+              "maximum": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 3,
+      "size": 10,
+      "rule": "cyl < 7 & mpg >= 21.45",
+      "responsessum": [
+        {
+          "minimum": 52,
+          "q1": 65.25,
+          "median": 78.5,
+          "mean": 80,
+          "q3": 94.5,
+          "maximum": 113
+        }
+      ],
+      "children": [
+        {
+          "name": 4,
+          "size": 4,
+          "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "responsessum": [
+            {
+              "minimum": 52,
+              "q1": 61.75,
+              "median": 65.5,
+              "mean": 62.25,
+              "q3": 66,
+              "maximum": 66
+            }
+          ]
+        },
+        {
+          "name": 5,
+          "size": 6,
+          "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "responsessum": [
+            {
+              "minimum": 62,
+              "q1": 91.5,
+              "median": 94,
+              "mean": 91.83,
+              "q3": 96.5,
+              "maximum": 113
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 4,
+      "size": 4,
+      "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+      "responsessum": [
+        {
+          "minimum": 52,
+          "q1": 61.75,
+          "median": 65.5,
+          "mean": 62.25,
+          "q3": 66,
+          "maximum": 66
+        }
+      ]
+    },
+    {
+      "name": 5,
+      "size": 6,
+      "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+      "responsessum": [
+        {
+          "minimum": 62,
+          "q1": 91.5,
+          "median": 94,
+          "mean": 91.83,
+          "q3": 96.5,
+          "maximum": 113
+        }
+      ]
+    },
+    {
+      "name": 6,
+      "size": 8,
+      "rule": "cyl < 7 & mpg < 21.45",
+      "responsessum": [
+        {
+          "minimum": 105,
+          "q1": 109.8,
+          "median": 110,
+          "mean": 120.6,
+          "q3": 123,
+          "maximum": 175
+        }
+      ],
+      "children": [
+        {
+          "name": 7,
+          "size": 7,
+          "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "responsessum": [
+            {
+              "minimum": 105,
+              "q1": 109.5,
+              "median": 110,
+              "mean": 112.9,
+              "q3": 116.5,
+              "maximum": 123
+            }
+          ]
+        },
+        {
+          "name": 8,
+          "size": 1,
+          "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "responsessum": [
+            {
+              "minimum": 175,
+              "q1": 175,
+              "median": 175,
+              "mean": 175,
+              "q3": 175,
+              "maximum": 175
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 7,
+      "size": 7,
+      "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+      "responsessum": [
+        {
+          "minimum": 105,
+          "q1": 109.5,
+          "median": 110,
+          "mean": 112.9,
+          "q3": 116.5,
+          "maximum": 123
+        }
+      ]
+    },
+    {
+      "name": 8,
+      "size": 1,
+      "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+      "responsessum": [
+        {
+          "minimum": 175,
+          "q1": 175,
+          "median": 175,
+          "mean": 175,
+          "q3": 175,
+          "maximum": 175
+        }
+      ]
+    },
+    {
+      "name": 9,
+      "size": 14,
+      "rule": "cyl >= 7",
+      "responsessum": [
+        {
+          "minimum": 150,
+          "q1": 176.2,
+          "median": 192.5,
+          "mean": 209.2,
+          "q3": 241.2,
+          "maximum": 335
+        }
+      ],
+      "children": [
+        {
+          "name": 10,
+          "size": 9,
+          "rule": "cyl >= 7 & drat < 3.18",
+          "responsessum": [
+            {
+              "minimum": 150,
+              "q1": 175,
+              "median": 180,
+              "mean": 178.9,
+              "q3": 180,
+              "maximum": 215
+            }
+          ],
+          "children": [
+            {
+              "name": 11,
+              "size": 7,
+              "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+              "responsessum": [
+                {
+                  "minimum": 150,
+                  "q1": 162.5,
+                  "median": 175,
+                  "mean": 170,
+                  "q3": 180,
+                  "maximum": 180
+                }
+              ]
+            },
+            {
+              "name": 12,
+              "size": 2,
+              "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+              "responsessum": [
+                {
+                  "minimum": 205,
+                  "q1": 207.5,
+                  "median": 210,
+                  "mean": 210,
+                  "q3": 212.5,
+                  "maximum": 215
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 11,
+          "size": 7,
+          "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "responsessum": [
+            {
+              "minimum": 150,
+              "q1": 162.5,
+              "median": 175,
+              "mean": 170,
+              "q3": 180,
+              "maximum": 180
+            }
+          ]
+        },
+        {
+          "name": 12,
+          "size": 2,
+          "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "responsessum": [
+            {
+              "minimum": 205,
+              "q1": 207.5,
+              "median": 210,
+              "mean": 210,
+              "q3": 212.5,
+              "maximum": 215
+            }
+          ]
+        },
+        {
+          "name": 13,
+          "size": 5,
+          "rule": "cyl >= 7 & drat >= 3.18",
+          "responsessum": [
+            {
+              "minimum": 230,
+              "q1": 245,
+              "median": 245,
+              "mean": 263.8,
+              "q3": 264,
+              "maximum": 335
+            }
+          ],
+          "children": [
+            {
+              "name": 14,
+              "size": 4,
+              "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+              "responsessum": [
+                {
+                  "minimum": 230,
+                  "q1": 241.2,
+                  "median": 245,
+                  "mean": 246,
+                  "q3": 249.8,
+                  "maximum": 264
+                }
+              ]
+            },
+            {
+              "name": 15,
+              "size": 1,
+              "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+              "responsessum": [
+                {
+                  "minimum": 335,
+                  "q1": 335,
+                  "median": 335,
+                  "mean": 335,
+                  "q3": 335,
+                  "maximum": 335
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 14,
+          "size": 4,
+          "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "responsessum": [
+            {
+              "minimum": 230,
+              "q1": 241.2,
+              "median": 245,
+              "mean": 246,
+              "q3": 249.8,
+              "maximum": 264
+            }
+          ]
+        },
+        {
+          "name": 15,
+          "size": 1,
+          "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "responsessum": [
+            {
+              "minimum": 335,
+              "q1": 335,
+              "median": 335,
+              "mean": 335,
+              "q3": 335,
+              "maximum": 335
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 10,
+      "size": 9,
+      "rule": "cyl >= 7 & drat < 3.18",
+      "responsessum": [
+        {
+          "minimum": 150,
+          "q1": 175,
+          "median": 180,
+          "mean": 178.9,
+          "q3": 180,
+          "maximum": 215
+        }
+      ],
+      "children": [
+        {
+          "name": 11,
+          "size": 7,
+          "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "responsessum": [
+            {
+              "minimum": 150,
+              "q1": 162.5,
+              "median": 175,
+              "mean": 170,
+              "q3": 180,
+              "maximum": 180
+            }
+          ]
+        },
+        {
+          "name": 12,
+          "size": 2,
+          "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "responsessum": [
+            {
+              "minimum": 205,
+              "q1": 207.5,
+              "median": 210,
+              "mean": 210,
+              "q3": 212.5,
+              "maximum": 215
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 11,
+      "size": 7,
+      "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+      "responsessum": [
+        {
+          "minimum": 150,
+          "q1": 162.5,
+          "median": 175,
+          "mean": 170,
+          "q3": 180,
+          "maximum": 180
+        }
+      ]
+    },
+    {
+      "name": 12,
+      "size": 2,
+      "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+      "responsessum": [
+        {
+          "minimum": 205,
+          "q1": 207.5,
+          "median": 210,
+          "mean": 210,
+          "q3": 212.5,
+          "maximum": 215
+        }
+      ]
+    },
+    {
+      "name": 13,
+      "size": 5,
+      "rule": "cyl >= 7 & drat >= 3.18",
+      "responsessum": [
+        {
+          "minimum": 230,
+          "q1": 245,
+          "median": 245,
+          "mean": 263.8,
+          "q3": 264,
+          "maximum": 335
+        }
+      ],
+      "children": [
+        {
+          "name": 14,
+          "size": 4,
+          "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "responsessum": [
+            {
+              "minimum": 230,
+              "q1": 241.2,
+              "median": 245,
+              "mean": 246,
+              "q3": 249.8,
+              "maximum": 264
+            }
+          ]
+        },
+        {
+          "name": 15,
+          "size": 1,
+          "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "responsessum": [
+            {
+              "minimum": 335,
+              "q1": 335,
+              "median": 335,
+              "mean": 335,
+              "q3": 335,
+              "maximum": 335
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 14,
+      "size": 4,
+      "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+      "responsessum": [
+        {
+          "minimum": 230,
+          "q1": 241.2,
+          "median": 245,
+          "mean": 246,
+          "q3": 249.8,
+          "maximum": 264
+        }
+      ]
+    },
+    {
+      "name": 15,
+      "size": 1,
+      "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+      "responsessum": [
+        {
+          "minimum": 335,
+          "q1": 335,
+          "median": 335,
+          "mean": 335,
+          "q3": 335,
+          "maximum": 335
+        }
+      ]
+    }
+  ]
+}

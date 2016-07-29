@@ -1,0 +1,295 @@
+{
+  "name": 1,
+  "size": 116,
+  "rule": "",
+  "responsessum": [
+    {
+      "minimum": 1,
+      "q1": 18,
+      "median": 31.5,
+      "mean": 42.13,
+      "q3": 63.25,
+      "maximum": 168
+    }
+  ],
+  "children": [
+    {
+      "name": 2,
+      "size": 79,
+      "rule": "Temp <= 82",
+      "responsessum": [
+        {
+          "minimum": 1,
+          "q1": 13.5,
+          "median": 21,
+          "mean": 26.54,
+          "q3": 32,
+          "maximum": 168
+        }
+      ],
+      "children": [
+        {
+          "name": 3,
+          "size": 10,
+          "rule": "Temp <= 82 & Wind <= 6.9",
+          "responsessum": [
+            {
+              "minimum": 7,
+              "q1": 28.5,
+              "median": 42.5,
+              "mean": 55.6,
+              "q3": 56.25,
+              "maximum": 168
+            }
+          ]
+        },
+        {
+          "name": 4,
+          "size": 69,
+          "rule": "Temp <= 82 & Wind > 6.9",
+          "responsessum": [
+            {
+              "minimum": 1,
+              "q1": 13,
+              "median": 20,
+              "mean": 22.33,
+              "q3": 29,
+              "maximum": 65
+            }
+          ],
+          "children": [
+            {
+              "name": 5,
+              "size": 48,
+              "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+              "responsessum": [
+                {
+                  "minimum": 1,
+                  "q1": 12,
+                  "median": 18,
+                  "mean": 18.48,
+                  "q3": 23,
+                  "maximum": 41
+                }
+              ]
+            },
+            {
+              "name": 6,
+              "size": 21,
+              "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+              "responsessum": [
+                {
+                  "minimum": 7,
+                  "q1": 20,
+                  "median": 29,
+                  "mean": 31.14,
+                  "q3": 44,
+                  "maximum": 65
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 5,
+          "size": 48,
+          "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "responsessum": [
+            {
+              "minimum": 1,
+              "q1": 12,
+              "median": 18,
+              "mean": 18.48,
+              "q3": 23,
+              "maximum": 41
+            }
+          ]
+        },
+        {
+          "name": 6,
+          "size": 21,
+          "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "responsessum": [
+            {
+              "minimum": 7,
+              "q1": 20,
+              "median": 29,
+              "mean": 31.14,
+              "q3": 44,
+              "maximum": 65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 3,
+      "size": 10,
+      "rule": "Temp <= 82 & Wind <= 6.9",
+      "responsessum": [
+        {
+          "minimum": 7,
+          "q1": 28.5,
+          "median": 42.5,
+          "mean": 55.6,
+          "q3": 56.25,
+          "maximum": 168
+        }
+      ]
+    },
+    {
+      "name": 4,
+      "size": 69,
+      "rule": "Temp <= 82 & Wind > 6.9",
+      "responsessum": [
+        {
+          "minimum": 1,
+          "q1": 13,
+          "median": 20,
+          "mean": 22.33,
+          "q3": 29,
+          "maximum": 65
+        }
+      ],
+      "children": [
+        {
+          "name": 5,
+          "size": 48,
+          "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "responsessum": [
+            {
+              "minimum": 1,
+              "q1": 12,
+              "median": 18,
+              "mean": 18.48,
+              "q3": 23,
+              "maximum": 41
+            }
+          ]
+        },
+        {
+          "name": 6,
+          "size": 21,
+          "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "responsessum": [
+            {
+              "minimum": 7,
+              "q1": 20,
+              "median": 29,
+              "mean": 31.14,
+              "q3": 44,
+              "maximum": 65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 5,
+      "size": 48,
+      "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+      "responsessum": [
+        {
+          "minimum": 1,
+          "q1": 12,
+          "median": 18,
+          "mean": 18.48,
+          "q3": 23,
+          "maximum": 41
+        }
+      ]
+    },
+    {
+      "name": 6,
+      "size": 21,
+      "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+      "responsessum": [
+        {
+          "minimum": 7,
+          "q1": 20,
+          "median": 29,
+          "mean": 31.14,
+          "q3": 44,
+          "maximum": 65
+        }
+      ]
+    },
+    {
+      "name": 7,
+      "size": 37,
+      "rule": "Temp > 82",
+      "responsessum": [
+        {
+          "minimum": 32,
+          "q1": 61,
+          "median": 77,
+          "mean": 75.41,
+          "q3": 89,
+          "maximum": 135
+        }
+      ],
+      "children": [
+        {
+          "name": 8,
+          "size": 30,
+          "rule": "Temp > 82 & Wind <= 10.3",
+          "responsessum": [
+            {
+              "minimum": 35,
+              "q1": 67.75,
+              "median": 79.5,
+              "mean": 81.63,
+              "q3": 94.75,
+              "maximum": 135
+            }
+          ]
+        },
+        {
+          "name": 9,
+          "size": 7,
+          "rule": "Temp > 82 & Wind > 10.3",
+          "responsessum": [
+            {
+              "minimum": 32,
+              "q1": 39.5,
+              "median": 44,
+              "mean": 48.71,
+              "q3": 57.5,
+              "maximum": 71
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 8,
+      "size": 30,
+      "rule": "Temp > 82 & Wind <= 10.3",
+      "responsessum": [
+        {
+          "minimum": 35,
+          "q1": 67.75,
+          "median": 79.5,
+          "mean": 81.63,
+          "q3": 94.75,
+          "maximum": 135
+        }
+      ]
+    },
+    {
+      "name": 9,
+      "size": 7,
+      "rule": "Temp > 82 & Wind > 10.3",
+      "responsessum": [
+        {
+          "minimum": 32,
+          "q1": 39.5,
+          "median": 44,
+          "mean": 48.71,
+          "q3": 57.5,
+          "maximum": 71
+        }
+      ]
+    }
+  ]
+}

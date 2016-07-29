@@ -1,0 +1,293 @@
+{
+  "name": 1,
+  "size": 150,
+  "rule": "",
+  "responsessum": [
+    {
+      "names": "setosa",
+      "x": 50
+    },
+    {
+      "names": "versicolor",
+      "x": 50
+    },
+    {
+      "names": "virginica",
+      "x": 50
+    }
+  ],
+  "children": [
+    {
+      "name": 2,
+      "size": 50,
+      "rule": "Petal.Length <= 1.9",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 50
+        },
+        {
+          "names": "versicolor",
+          "x": 0
+        },
+        {
+          "names": "virginica",
+          "x": 0
+        }
+      ]
+    },
+    {
+      "name": 3,
+      "size": 100,
+      "rule": "Petal.Length > 1.9",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 0
+        },
+        {
+          "names": "versicolor",
+          "x": 50
+        },
+        {
+          "names": "virginica",
+          "x": 50
+        }
+      ],
+      "children": [
+        {
+          "name": 4,
+          "size": 54,
+          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 49
+            },
+            {
+              "names": "virginica",
+              "x": 5
+            }
+          ],
+          "children": [
+            {
+              "name": 5,
+              "size": 46,
+              "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+              "responsessum": [
+                {
+                  "names": "setosa",
+                  "x": 0
+                },
+                {
+                  "names": "versicolor",
+                  "x": 45
+                },
+                {
+                  "names": "virginica",
+                  "x": 1
+                }
+              ]
+            },
+            {
+              "name": 6,
+              "size": 8,
+              "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+              "responsessum": [
+                {
+                  "names": "setosa",
+                  "x": 0
+                },
+                {
+                  "names": "versicolor",
+                  "x": 4
+                },
+                {
+                  "names": "virginica",
+                  "x": 4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": 5,
+          "size": 46,
+          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 45
+            },
+            {
+              "names": "virginica",
+              "x": 1
+            }
+          ]
+        },
+        {
+          "name": 6,
+          "size": 8,
+          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 4
+            },
+            {
+              "names": "virginica",
+              "x": 4
+            }
+          ]
+        },
+        {
+          "name": 7,
+          "size": 46,
+          "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 1
+            },
+            {
+              "names": "virginica",
+              "x": 45
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 4,
+      "size": 54,
+      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 0
+        },
+        {
+          "names": "versicolor",
+          "x": 49
+        },
+        {
+          "names": "virginica",
+          "x": 5
+        }
+      ],
+      "children": [
+        {
+          "name": 5,
+          "size": 46,
+          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 45
+            },
+            {
+              "names": "virginica",
+              "x": 1
+            }
+          ]
+        },
+        {
+          "name": 6,
+          "size": 8,
+          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+          "responsessum": [
+            {
+              "names": "setosa",
+              "x": 0
+            },
+            {
+              "names": "versicolor",
+              "x": 4
+            },
+            {
+              "names": "virginica",
+              "x": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": 5,
+      "size": 46,
+      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 0
+        },
+        {
+          "names": "versicolor",
+          "x": 45
+        },
+        {
+          "names": "virginica",
+          "x": 1
+        }
+      ]
+    },
+    {
+      "name": 6,
+      "size": 8,
+      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 0
+        },
+        {
+          "names": "versicolor",
+          "x": 4
+        },
+        {
+          "names": "virginica",
+          "x": 4
+        }
+      ]
+    },
+    {
+      "name": 7,
+      "size": 46,
+      "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
+      "responsessum": [
+        {
+          "names": "setosa",
+          "x": 0
+        },
+        {
+          "names": "versicolor",
+          "x": 1
+        },
+        {
+          "names": "virginica",
+          "x": 45
+        }
+      ]
+    }
+  ]
+}
