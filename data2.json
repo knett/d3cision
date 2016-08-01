@@ -4,6 +4,7 @@
   "depth": 3,
   "rule": "",
   "terminal": false,
+  "nchildren": 6,
   "summary": [
     {
       "names": "setosa",
@@ -18,7 +19,6 @@
       "x": 50
     }
   ],
-  "nchildren": 6,
   "children": [
     {
       "name": 2,
@@ -26,6 +26,7 @@
       "depth": 0,
       "rule": "Petal.Length <= 1.9",
       "terminal": true,
+      "nchildren": 0,
       "summary": [
         {
           "names": "setosa",
@@ -39,8 +40,7 @@
           "names": "virginica",
           "x": 0
         }
-      ],
-      "nchildren": 0
+      ]
     },
     {
       "name": 3,
@@ -48,6 +48,7 @@
       "depth": 2,
       "rule": "Petal.Length > 1.9",
       "terminal": false,
+      "nchildren": 4,
       "summary": [
         {
           "names": "setosa",
@@ -62,7 +63,6 @@
           "x": 50
         }
       ],
-      "nchildren": 4,
       "children": [
         {
           "name": 4,
@@ -70,6 +70,7 @@
           "depth": 1,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
           "terminal": false,
+          "nchildren": 2,
           "summary": [
             {
               "names": "setosa",
@@ -84,7 +85,6 @@
               "x": 5
             }
           ],
-          "nchildren": 2,
           "children": [
             {
               "name": 5,
@@ -92,6 +92,7 @@
               "depth": 0,
               "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
               "terminal": true,
+              "nchildren": 0,
               "summary": [
                 {
                   "names": "setosa",
@@ -105,8 +106,7 @@
                   "names": "virginica",
                   "x": 1
                 }
-              ],
-              "nchildren": 0
+              ]
             },
             {
               "name": 6,
@@ -114,6 +114,7 @@
               "depth": 0,
               "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
               "terminal": true,
+              "nchildren": 0,
               "summary": [
                 {
                   "names": "setosa",
@@ -127,8 +128,7 @@
                   "names": "virginica",
                   "x": 4
                 }
-              ],
-              "nchildren": 0
+              ]
             }
           ]
         },
@@ -138,6 +138,7 @@
           "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
           "terminal": true,
+          "nchildren": 0,
           "summary": [
             {
               "names": "setosa",
@@ -151,8 +152,7 @@
               "names": "virginica",
               "x": 1
             }
-          ],
-          "nchildren": 0
+          ]
         },
         {
           "name": 6,
@@ -160,6 +160,7 @@
           "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
           "terminal": true,
+          "nchildren": 0,
           "summary": [
             {
               "names": "setosa",
@@ -173,8 +174,7 @@
               "names": "virginica",
               "x": 4
             }
-          ],
-          "nchildren": 0
+          ]
         },
         {
           "name": 7,
@@ -182,6 +182,7 @@
           "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
           "terminal": true,
+          "nchildren": 0,
           "summary": [
             {
               "names": "setosa",
@@ -195,8 +196,7 @@
               "names": "virginica",
               "x": 45
             }
-          ],
-          "nchildren": 0
+          ]
         }
       ]
     },
@@ -206,6 +206,7 @@
       "depth": 1,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
       "terminal": false,
+      "nchildren": 2,
       "summary": [
         {
           "names": "setosa",
@@ -220,7 +221,6 @@
           "x": 5
         }
       ],
-      "nchildren": 2,
       "children": [
         {
           "name": 5,
@@ -228,6 +228,7 @@
           "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
           "terminal": true,
+          "nchildren": 0,
           "summary": [
             {
               "names": "setosa",
@@ -241,8 +242,7 @@
               "names": "virginica",
               "x": 1
             }
-          ],
-          "nchildren": 0
+          ]
         },
         {
           "name": 6,
@@ -250,6 +250,7 @@
           "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
           "terminal": true,
+          "nchildren": 0,
           "summary": [
             {
               "names": "setosa",
@@ -263,8 +264,7 @@
               "names": "virginica",
               "x": 4
             }
-          ],
-          "nchildren": 0
+          ]
         }
       ]
     },
@@ -274,6 +274,7 @@
       "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
       "terminal": true,
+      "nchildren": 0,
       "summary": [
         {
           "names": "setosa",
@@ -287,8 +288,7 @@
           "names": "virginica",
           "x": 1
         }
-      ],
-      "nchildren": 0
+      ]
     },
     {
       "name": 6,
@@ -296,6 +296,7 @@
       "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
       "terminal": true,
+      "nchildren": 0,
       "summary": [
         {
           "names": "setosa",
@@ -309,8 +310,7 @@
           "names": "virginica",
           "x": 4
         }
-      ],
-      "nchildren": 0
+      ]
     },
     {
       "name": 7,
@@ -318,6 +318,7 @@
       "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
       "terminal": true,
+      "nchildren": 0,
       "summary": [
         {
           "names": "setosa",
@@ -331,8 +332,7 @@
           "names": "virginica",
           "x": 45
         }
-      ],
-      "nchildren": 0
+      ]
     }
   ]
 }

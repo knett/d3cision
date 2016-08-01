@@ -65,8 +65,8 @@ tree_list <- function(tree, node = 1){
     depth = depth,
     rule = rule,
     terminal = isterminal,
-    summary = summary,
-    nchildren = length(children) - 1
+    nchildren = length(children) - 1,
+    summary = summary
   )
   
   if (!isterminal) {
