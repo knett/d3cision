@@ -3,6 +3,7 @@
   "size": 116,
   "depth": 3,
   "rule": "",
+  "completerule": "",
   "terminal": false,
   "nchildren": 8,
   "summary": [
@@ -21,6 +22,7 @@
       "size": 79,
       "depth": 2,
       "rule": "Temp <= 82",
+      "completerule": "Temp <= 82",
       "terminal": false,
       "nchildren": 4,
       "summary": [
@@ -38,7 +40,8 @@
           "name": 3,
           "size": 10,
           "depth": 0,
-          "rule": "Temp <= 82 & Wind <= 6.9",
+          "rule": "Wind <= 6.9",
+          "completerule": "Temp <= 82 & Wind <= 6.9",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -56,7 +59,8 @@
           "name": 4,
           "size": 69,
           "depth": 1,
-          "rule": "Temp <= 82 & Wind > 6.9",
+          "rule": "Wind > 6.9",
+          "completerule": "Temp <= 82 & Wind > 6.9",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -74,7 +78,8 @@
               "name": 5,
               "size": 48,
               "depth": 0,
-              "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+              "rule": "Temp <= 77",
+              "completerule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -92,7 +97,8 @@
               "name": 6,
               "size": 21,
               "depth": 0,
-              "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+              "rule": "Temp > 77",
+              "completerule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -112,7 +118,8 @@
           "name": 5,
           "size": 48,
           "depth": 0,
-          "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "rule": "Temp <= 77",
+          "completerule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -130,7 +137,8 @@
           "name": 6,
           "size": 21,
           "depth": 0,
-          "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "rule": "Temp > 77",
+          "completerule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -150,7 +158,8 @@
       "name": 3,
       "size": 10,
       "depth": 0,
-      "rule": "Temp <= 82 & Wind <= 6.9",
+      "rule": "Wind <= 6.9",
+      "completerule": "Temp <= 82 & Wind <= 6.9",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -168,7 +177,8 @@
       "name": 4,
       "size": 69,
       "depth": 1,
-      "rule": "Temp <= 82 & Wind > 6.9",
+      "rule": "Wind > 6.9",
+      "completerule": "Temp <= 82 & Wind > 6.9",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -186,7 +196,8 @@
           "name": 5,
           "size": 48,
           "depth": 0,
-          "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "rule": "Temp <= 77",
+          "completerule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -204,7 +215,8 @@
           "name": 6,
           "size": 21,
           "depth": 0,
-          "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "rule": "Temp > 77",
+          "completerule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -224,7 +236,8 @@
       "name": 5,
       "size": 48,
       "depth": 0,
-      "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+      "rule": "Temp <= 77",
+      "completerule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -242,7 +255,8 @@
       "name": 6,
       "size": 21,
       "depth": 0,
-      "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+      "rule": "Temp > 77",
+      "completerule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -261,6 +275,7 @@
       "size": 37,
       "depth": 1,
       "rule": "Temp > 82",
+      "completerule": "Temp > 82",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -278,7 +293,8 @@
           "name": 8,
           "size": 30,
           "depth": 0,
-          "rule": "Temp > 82 & Wind <= 10.3",
+          "rule": "Wind <= 10.3",
+          "completerule": "Temp > 82 & Wind <= 10.3",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -296,7 +312,8 @@
           "name": 9,
           "size": 7,
           "depth": 0,
-          "rule": "Temp > 82 & Wind > 10.3",
+          "rule": "Wind > 10.3",
+          "completerule": "Temp > 82 & Wind > 10.3",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -316,7 +333,8 @@
       "name": 8,
       "size": 30,
       "depth": 0,
-      "rule": "Temp > 82 & Wind <= 10.3",
+      "rule": "Wind <= 10.3",
+      "completerule": "Temp > 82 & Wind <= 10.3",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -334,7 +352,8 @@
       "name": 9,
       "size": 7,
       "depth": 0,
-      "rule": "Temp > 82 & Wind > 10.3",
+      "rule": "Wind > 10.3",
+      "completerule": "Temp > 82 & Wind > 10.3",
       "terminal": true,
       "nchildren": 0,
       "summary": [

@@ -5,7 +5,8 @@ library(jsonlite)
 library(magrittr)
 library(purrr)
 library(broom)
-
+library(stringr)
+library(dplyr)
 # http://stackoverflow.com/questions/34196611/converting-rpart-output-into-json-format-in-r
 
 # json_prsr <- function(tree, node = 1, node_stats = NULL){
@@ -51,11 +52,12 @@ tree_list <- function(tree, node = 1){
   if(!is(tree, c("constparty","party")))
     tree <- partykit::as.party(tree)
   
-  rule <- partykit:::.list.rules.party(tree, node)
+  completerule <- partykit:::.list.rules.party(tree, node)
   children <- partykit::nodeids(tree, node)
   size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
   depth <-  depth(tree[[node]])
   summary <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
+  rule <- last(unlist(str_split(completerule, "\\s+&\\s+")))
 
   isterminal <- length(children) == 1
   
@@ -64,6 +66,7 @@ tree_list <- function(tree, node = 1){
     size = size,
     depth = depth,
     rule = rule,
+    completerule = completerule,
     terminal = isterminal,
     nchildren = length(children) - 1,
     summary = summary

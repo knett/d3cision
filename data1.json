@@ -3,6 +3,7 @@
   "size": 32,
   "depth": 3,
   "rule": "",
+  "completerule": "",
   "terminal": false,
   "nchildren": 14,
   "summary": [
@@ -21,6 +22,7 @@
       "size": 18,
       "depth": 2,
       "rule": "cyl < 7",
+      "completerule": "cyl < 7",
       "terminal": false,
       "nchildren": 6,
       "summary": [
@@ -38,7 +40,8 @@
           "name": 3,
           "size": 10,
           "depth": 1,
-          "rule": "cyl < 7 & mpg >= 21.45",
+          "rule": "mpg >= 21.45",
+          "completerule": "cyl < 7 & mpg >= 21.45",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -56,7 +59,8 @@
               "name": 4,
               "size": 4,
               "depth": 0,
-              "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+              "rule": "disp < 87.05",
+              "completerule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -74,7 +78,8 @@
               "name": 5,
               "size": 6,
               "depth": 0,
-              "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+              "rule": "disp >= 87.05",
+              "completerule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -94,7 +99,8 @@
           "name": 4,
           "size": 4,
           "depth": 0,
-          "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "rule": "disp < 87.05",
+          "completerule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -112,7 +118,8 @@
           "name": 5,
           "size": 6,
           "depth": 0,
-          "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "rule": "disp >= 87.05",
+          "completerule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -130,7 +137,8 @@
           "name": 6,
           "size": 8,
           "depth": 1,
-          "rule": "cyl < 7 & mpg < 21.45",
+          "rule": "mpg < 21.45",
+          "completerule": "cyl < 7 & mpg < 21.45",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -148,7 +156,8 @@
               "name": 7,
               "size": 7,
               "depth": 0,
-              "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+              "rule": "qsec >= 15.98",
+              "completerule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -166,7 +175,8 @@
               "name": 8,
               "size": 1,
               "depth": 0,
-              "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+              "rule": "qsec < 15.98",
+              "completerule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -186,7 +196,8 @@
           "name": 7,
           "size": 7,
           "depth": 0,
-          "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "rule": "qsec >= 15.98",
+          "completerule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -204,7 +215,8 @@
           "name": 8,
           "size": 1,
           "depth": 0,
-          "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "rule": "qsec < 15.98",
+          "completerule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -224,7 +236,8 @@
       "name": 3,
       "size": 10,
       "depth": 1,
-      "rule": "cyl < 7 & mpg >= 21.45",
+      "rule": "mpg >= 21.45",
+      "completerule": "cyl < 7 & mpg >= 21.45",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -242,7 +255,8 @@
           "name": 4,
           "size": 4,
           "depth": 0,
-          "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "rule": "disp < 87.05",
+          "completerule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -260,7 +274,8 @@
           "name": 5,
           "size": 6,
           "depth": 0,
-          "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "rule": "disp >= 87.05",
+          "completerule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -280,7 +295,8 @@
       "name": 4,
       "size": 4,
       "depth": 0,
-      "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+      "rule": "disp < 87.05",
+      "completerule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -298,7 +314,8 @@
       "name": 5,
       "size": 6,
       "depth": 0,
-      "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+      "rule": "disp >= 87.05",
+      "completerule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -316,7 +333,8 @@
       "name": 6,
       "size": 8,
       "depth": 1,
-      "rule": "cyl < 7 & mpg < 21.45",
+      "rule": "mpg < 21.45",
+      "completerule": "cyl < 7 & mpg < 21.45",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -334,7 +352,8 @@
           "name": 7,
           "size": 7,
           "depth": 0,
-          "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "rule": "qsec >= 15.98",
+          "completerule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -352,7 +371,8 @@
           "name": 8,
           "size": 1,
           "depth": 0,
-          "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "rule": "qsec < 15.98",
+          "completerule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -372,7 +392,8 @@
       "name": 7,
       "size": 7,
       "depth": 0,
-      "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+      "rule": "qsec >= 15.98",
+      "completerule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -390,7 +411,8 @@
       "name": 8,
       "size": 1,
       "depth": 0,
-      "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+      "rule": "qsec < 15.98",
+      "completerule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -409,6 +431,7 @@
       "size": 14,
       "depth": 2,
       "rule": "cyl >= 7",
+      "completerule": "cyl >= 7",
       "terminal": false,
       "nchildren": 6,
       "summary": [
@@ -426,7 +449,8 @@
           "name": 10,
           "size": 9,
           "depth": 1,
-          "rule": "cyl >= 7 & drat < 3.18",
+          "rule": "drat < 3.18",
+          "completerule": "cyl >= 7 & drat < 3.18",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -444,7 +468,8 @@
               "name": 11,
               "size": 7,
               "depth": 0,
-              "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+              "rule": "mpg >= 12.8",
+              "completerule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -462,7 +487,8 @@
               "name": 12,
               "size": 2,
               "depth": 0,
-              "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+              "rule": "mpg < 12.8",
+              "completerule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -482,7 +508,8 @@
           "name": 11,
           "size": 7,
           "depth": 0,
-          "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "rule": "mpg >= 12.8",
+          "completerule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -500,7 +527,8 @@
           "name": 12,
           "size": 2,
           "depth": 0,
-          "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "rule": "mpg < 12.8",
+          "completerule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -518,7 +546,8 @@
           "name": 13,
           "size": 5,
           "depth": 1,
-          "rule": "cyl >= 7 & drat >= 3.18",
+          "rule": "drat >= 3.18",
+          "completerule": "cyl >= 7 & drat >= 3.18",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -536,7 +565,8 @@
               "name": 14,
               "size": 4,
               "depth": 0,
-              "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+              "rule": "carb < 6",
+              "completerule": "cyl >= 7 & drat >= 3.18 & carb < 6",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -554,7 +584,8 @@
               "name": 15,
               "size": 1,
               "depth": 0,
-              "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+              "rule": "carb >= 6",
+              "completerule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -574,7 +605,8 @@
           "name": 14,
           "size": 4,
           "depth": 0,
-          "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "rule": "carb < 6",
+          "completerule": "cyl >= 7 & drat >= 3.18 & carb < 6",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -592,7 +624,8 @@
           "name": 15,
           "size": 1,
           "depth": 0,
-          "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "rule": "carb >= 6",
+          "completerule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -612,7 +645,8 @@
       "name": 10,
       "size": 9,
       "depth": 1,
-      "rule": "cyl >= 7 & drat < 3.18",
+      "rule": "drat < 3.18",
+      "completerule": "cyl >= 7 & drat < 3.18",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -630,7 +664,8 @@
           "name": 11,
           "size": 7,
           "depth": 0,
-          "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "rule": "mpg >= 12.8",
+          "completerule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -648,7 +683,8 @@
           "name": 12,
           "size": 2,
           "depth": 0,
-          "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "rule": "mpg < 12.8",
+          "completerule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -668,7 +704,8 @@
       "name": 11,
       "size": 7,
       "depth": 0,
-      "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+      "rule": "mpg >= 12.8",
+      "completerule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -686,7 +723,8 @@
       "name": 12,
       "size": 2,
       "depth": 0,
-      "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+      "rule": "mpg < 12.8",
+      "completerule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -704,7 +742,8 @@
       "name": 13,
       "size": 5,
       "depth": 1,
-      "rule": "cyl >= 7 & drat >= 3.18",
+      "rule": "drat >= 3.18",
+      "completerule": "cyl >= 7 & drat >= 3.18",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -722,7 +761,8 @@
           "name": 14,
           "size": 4,
           "depth": 0,
-          "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "rule": "carb < 6",
+          "completerule": "cyl >= 7 & drat >= 3.18 & carb < 6",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -740,7 +780,8 @@
           "name": 15,
           "size": 1,
           "depth": 0,
-          "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "rule": "carb >= 6",
+          "completerule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -760,7 +801,8 @@
       "name": 14,
       "size": 4,
       "depth": 0,
-      "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+      "rule": "carb < 6",
+      "completerule": "cyl >= 7 & drat >= 3.18 & carb < 6",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -778,7 +820,8 @@
       "name": 15,
       "size": 1,
       "depth": 0,
-      "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+      "rule": "carb >= 6",
+      "completerule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
       "terminal": true,
       "nchildren": 0,
       "summary": [

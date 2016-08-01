@@ -3,6 +3,7 @@
   "size": 150,
   "depth": 3,
   "rule": "",
+  "completerule": "",
   "terminal": false,
   "nchildren": 6,
   "summary": [
@@ -25,6 +26,7 @@
       "size": 50,
       "depth": 0,
       "rule": "Petal.Length <= 1.9",
+      "completerule": "Petal.Length <= 1.9",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -47,6 +49,7 @@
       "size": 100,
       "depth": 2,
       "rule": "Petal.Length > 1.9",
+      "completerule": "Petal.Length > 1.9",
       "terminal": false,
       "nchildren": 4,
       "summary": [
@@ -68,7 +71,8 @@
           "name": 4,
           "size": 54,
           "depth": 1,
-          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
+          "rule": "Petal.Width <= 1.7",
+          "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
           "terminal": false,
           "nchildren": 2,
           "summary": [
@@ -90,7 +94,8 @@
               "name": 5,
               "size": 46,
               "depth": 0,
-              "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+              "rule": "Petal.Length <= 4.8",
+              "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -112,7 +117,8 @@
               "name": 6,
               "size": 8,
               "depth": 0,
-              "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+              "rule": "Petal.Length > 4.8",
+              "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
               "terminal": true,
               "nchildren": 0,
               "summary": [
@@ -136,7 +142,8 @@
           "name": 5,
           "size": 46,
           "depth": 0,
-          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+          "rule": "Petal.Length <= 4.8",
+          "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -158,7 +165,8 @@
           "name": 6,
           "size": 8,
           "depth": 0,
-          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+          "rule": "Petal.Length > 4.8",
+          "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -180,7 +188,8 @@
           "name": 7,
           "size": 46,
           "depth": 0,
-          "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
+          "rule": "Petal.Width > 1.7",
+          "completerule": "Petal.Length > 1.9 & Petal.Width > 1.7",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -204,7 +213,8 @@
       "name": 4,
       "size": 54,
       "depth": 1,
-      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
+      "rule": "Petal.Width <= 1.7",
+      "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
       "terminal": false,
       "nchildren": 2,
       "summary": [
@@ -226,7 +236,8 @@
           "name": 5,
           "size": 46,
           "depth": 0,
-          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+          "rule": "Petal.Length <= 4.8",
+          "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -248,7 +259,8 @@
           "name": 6,
           "size": 8,
           "depth": 0,
-          "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+          "rule": "Petal.Length > 4.8",
+          "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
           "terminal": true,
           "nchildren": 0,
           "summary": [
@@ -272,7 +284,8 @@
       "name": 5,
       "size": 46,
       "depth": 0,
-      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
+      "rule": "Petal.Length <= 4.8",
+      "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -294,7 +307,8 @@
       "name": 6,
       "size": 8,
       "depth": 0,
-      "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
+      "rule": "Petal.Length > 4.8",
+      "completerule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
       "terminal": true,
       "nchildren": 0,
       "summary": [
@@ -316,7 +330,8 @@
       "name": 7,
       "size": 46,
       "depth": 0,
-      "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
+      "rule": "Petal.Width > 1.7",
+      "completerule": "Petal.Length > 1.9 & Petal.Width > 1.7",
       "terminal": true,
       "nchildren": 0,
       "summary": [
