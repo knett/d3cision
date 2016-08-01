@@ -2,6 +2,7 @@
   "name": 1,
   "size": 32,
   "rule": "",
+  "terminal": true,
   "responsessum": [
     {
       "minimum": 52,
@@ -12,12 +13,12 @@
       "maximum": 335
     }
   ],
-  "terminal": true,
   "children": [
     {
       "name": 2,
       "size": 18,
       "rule": "cyl < 7",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 52,
@@ -28,12 +29,12 @@
           "maximum": 175
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 3,
           "size": 10,
           "rule": "cyl < 7 & mpg >= 21.45",
+          "terminal": true,
           "responsessum": [
             {
               "minimum": 52,
@@ -44,12 +45,12 @@
               "maximum": 113
             }
           ],
-          "terminal": true,
           "children": [
             {
               "name": 4,
               "size": 4,
               "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 52,
@@ -59,13 +60,13 @@
                   "q3": 66,
                   "maximum": 66
                 }
-              ],
-              "terminal": false
+              ]
             },
             {
               "name": 5,
               "size": 6,
               "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 62,
@@ -75,8 +76,7 @@
                   "q3": 96.5,
                   "maximum": 113
                 }
-              ],
-              "terminal": false
+              ]
             }
           ]
         },
@@ -84,6 +84,7 @@
           "name": 4,
           "size": 4,
           "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 52,
@@ -93,13 +94,13 @@
               "q3": 66,
               "maximum": 66
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 5,
           "size": 6,
           "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 62,
@@ -109,13 +110,13 @@
               "q3": 96.5,
               "maximum": 113
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 6,
           "size": 8,
           "rule": "cyl < 7 & mpg < 21.45",
+          "terminal": true,
           "responsessum": [
             {
               "minimum": 105,
@@ -126,12 +127,12 @@
               "maximum": 175
             }
           ],
-          "terminal": true,
           "children": [
             {
               "name": 7,
               "size": 7,
               "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 105,
@@ -141,13 +142,13 @@
                   "q3": 116.5,
                   "maximum": 123
                 }
-              ],
-              "terminal": false
+              ]
             },
             {
               "name": 8,
               "size": 1,
               "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 175,
@@ -157,8 +158,7 @@
                   "q3": 175,
                   "maximum": 175
                 }
-              ],
-              "terminal": false
+              ]
             }
           ]
         },
@@ -166,6 +166,7 @@
           "name": 7,
           "size": 7,
           "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 105,
@@ -175,13 +176,13 @@
               "q3": 116.5,
               "maximum": 123
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 8,
           "size": 1,
           "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 175,
@@ -191,8 +192,7 @@
               "q3": 175,
               "maximum": 175
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -200,6 +200,7 @@
       "name": 3,
       "size": 10,
       "rule": "cyl < 7 & mpg >= 21.45",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 52,
@@ -210,12 +211,12 @@
           "maximum": 113
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 4,
           "size": 4,
           "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 52,
@@ -225,13 +226,13 @@
               "q3": 66,
               "maximum": 66
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 5,
           "size": 6,
           "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 62,
@@ -241,8 +242,7 @@
               "q3": 96.5,
               "maximum": 113
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -250,6 +250,7 @@
       "name": 4,
       "size": 4,
       "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 52,
@@ -259,13 +260,13 @@
           "q3": 66,
           "maximum": 66
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 5,
       "size": 6,
       "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 62,
@@ -275,13 +276,13 @@
           "q3": 96.5,
           "maximum": 113
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 6,
       "size": 8,
       "rule": "cyl < 7 & mpg < 21.45",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 105,
@@ -292,12 +293,12 @@
           "maximum": 175
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 7,
           "size": 7,
           "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 105,
@@ -307,13 +308,13 @@
               "q3": 116.5,
               "maximum": 123
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 8,
           "size": 1,
           "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 175,
@@ -323,8 +324,7 @@
               "q3": 175,
               "maximum": 175
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -332,6 +332,7 @@
       "name": 7,
       "size": 7,
       "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 105,
@@ -341,13 +342,13 @@
           "q3": 116.5,
           "maximum": 123
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 8,
       "size": 1,
       "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 175,
@@ -357,13 +358,13 @@
           "q3": 175,
           "maximum": 175
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 9,
       "size": 14,
       "rule": "cyl >= 7",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 150,
@@ -374,12 +375,12 @@
           "maximum": 335
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 10,
           "size": 9,
           "rule": "cyl >= 7 & drat < 3.18",
+          "terminal": true,
           "responsessum": [
             {
               "minimum": 150,
@@ -390,12 +391,12 @@
               "maximum": 215
             }
           ],
-          "terminal": true,
           "children": [
             {
               "name": 11,
               "size": 7,
               "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 150,
@@ -405,13 +406,13 @@
                   "q3": 180,
                   "maximum": 180
                 }
-              ],
-              "terminal": false
+              ]
             },
             {
               "name": 12,
               "size": 2,
               "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 205,
@@ -421,8 +422,7 @@
                   "q3": 212.5,
                   "maximum": 215
                 }
-              ],
-              "terminal": false
+              ]
             }
           ]
         },
@@ -430,6 +430,7 @@
           "name": 11,
           "size": 7,
           "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 150,
@@ -439,13 +440,13 @@
               "q3": 180,
               "maximum": 180
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 12,
           "size": 2,
           "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 205,
@@ -455,13 +456,13 @@
               "q3": 212.5,
               "maximum": 215
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 13,
           "size": 5,
           "rule": "cyl >= 7 & drat >= 3.18",
+          "terminal": true,
           "responsessum": [
             {
               "minimum": 230,
@@ -472,12 +473,12 @@
               "maximum": 335
             }
           ],
-          "terminal": true,
           "children": [
             {
               "name": 14,
               "size": 4,
               "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 230,
@@ -487,13 +488,13 @@
                   "q3": 249.8,
                   "maximum": 264
                 }
-              ],
-              "terminal": false
+              ]
             },
             {
               "name": 15,
               "size": 1,
               "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 335,
@@ -503,8 +504,7 @@
                   "q3": 335,
                   "maximum": 335
                 }
-              ],
-              "terminal": false
+              ]
             }
           ]
         },
@@ -512,6 +512,7 @@
           "name": 14,
           "size": 4,
           "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 230,
@@ -521,13 +522,13 @@
               "q3": 249.8,
               "maximum": 264
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 15,
           "size": 1,
           "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 335,
@@ -537,8 +538,7 @@
               "q3": 335,
               "maximum": 335
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -546,6 +546,7 @@
       "name": 10,
       "size": 9,
       "rule": "cyl >= 7 & drat < 3.18",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 150,
@@ -556,12 +557,12 @@
           "maximum": 215
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 11,
           "size": 7,
           "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 150,
@@ -571,13 +572,13 @@
               "q3": 180,
               "maximum": 180
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 12,
           "size": 2,
           "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 205,
@@ -587,8 +588,7 @@
               "q3": 212.5,
               "maximum": 215
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -596,6 +596,7 @@
       "name": 11,
       "size": 7,
       "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 150,
@@ -605,13 +606,13 @@
           "q3": 180,
           "maximum": 180
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 12,
       "size": 2,
       "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 205,
@@ -621,13 +622,13 @@
           "q3": 212.5,
           "maximum": 215
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 13,
       "size": 5,
       "rule": "cyl >= 7 & drat >= 3.18",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 230,
@@ -638,12 +639,12 @@
           "maximum": 335
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 14,
           "size": 4,
           "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 230,
@@ -653,13 +654,13 @@
               "q3": 249.8,
               "maximum": 264
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 15,
           "size": 1,
           "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 335,
@@ -669,8 +670,7 @@
               "q3": 335,
               "maximum": 335
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -678,6 +678,7 @@
       "name": 14,
       "size": 4,
       "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 230,
@@ -687,13 +688,13 @@
           "q3": 249.8,
           "maximum": 264
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 15,
       "size": 1,
       "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 335,
@@ -703,8 +704,7 @@
           "q3": 335,
           "maximum": 335
         }
-      ],
-      "terminal": false
+      ]
     }
   ]
 }

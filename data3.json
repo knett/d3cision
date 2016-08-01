@@ -2,6 +2,7 @@
   "name": 1,
   "size": 116,
   "rule": "",
+  "terminal": true,
   "responsessum": [
     {
       "minimum": 1,
@@ -12,12 +13,12 @@
       "maximum": 168
     }
   ],
-  "terminal": true,
   "children": [
     {
       "name": 2,
       "size": 79,
       "rule": "Temp <= 82",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 1,
@@ -28,12 +29,12 @@
           "maximum": 168
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 3,
           "size": 10,
           "rule": "Temp <= 82 & Wind <= 6.9",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 7,
@@ -43,13 +44,13 @@
               "q3": 56.25,
               "maximum": 168
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 4,
           "size": 69,
           "rule": "Temp <= 82 & Wind > 6.9",
+          "terminal": true,
           "responsessum": [
             {
               "minimum": 1,
@@ -60,12 +61,12 @@
               "maximum": 65
             }
           ],
-          "terminal": true,
           "children": [
             {
               "name": 5,
               "size": 48,
               "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 1,
@@ -75,13 +76,13 @@
                   "q3": 23,
                   "maximum": 41
                 }
-              ],
-              "terminal": false
+              ]
             },
             {
               "name": 6,
               "size": 21,
               "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+              "terminal": false,
               "responsessum": [
                 {
                   "minimum": 7,
@@ -91,8 +92,7 @@
                   "q3": 44,
                   "maximum": 65
                 }
-              ],
-              "terminal": false
+              ]
             }
           ]
         },
@@ -100,6 +100,7 @@
           "name": 5,
           "size": 48,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 1,
@@ -109,13 +110,13 @@
               "q3": 23,
               "maximum": 41
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 6,
           "size": 21,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 7,
@@ -125,8 +126,7 @@
               "q3": 44,
               "maximum": 65
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -134,6 +134,7 @@
       "name": 3,
       "size": 10,
       "rule": "Temp <= 82 & Wind <= 6.9",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 7,
@@ -143,13 +144,13 @@
           "q3": 56.25,
           "maximum": 168
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 4,
       "size": 69,
       "rule": "Temp <= 82 & Wind > 6.9",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 1,
@@ -160,12 +161,12 @@
           "maximum": 65
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 5,
           "size": 48,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 1,
@@ -175,13 +176,13 @@
               "q3": 23,
               "maximum": 41
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 6,
           "size": 21,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 7,
@@ -191,8 +192,7 @@
               "q3": 44,
               "maximum": 65
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -200,6 +200,7 @@
       "name": 5,
       "size": 48,
       "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 1,
@@ -209,13 +210,13 @@
           "q3": 23,
           "maximum": 41
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 6,
       "size": 21,
       "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 7,
@@ -225,13 +226,13 @@
           "q3": 44,
           "maximum": 65
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 7,
       "size": 37,
       "rule": "Temp > 82",
+      "terminal": true,
       "responsessum": [
         {
           "minimum": 32,
@@ -242,12 +243,12 @@
           "maximum": 135
         }
       ],
-      "terminal": true,
       "children": [
         {
           "name": 8,
           "size": 30,
           "rule": "Temp > 82 & Wind <= 10.3",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 35,
@@ -257,13 +258,13 @@
               "q3": 94.75,
               "maximum": 135
             }
-          ],
-          "terminal": false
+          ]
         },
         {
           "name": 9,
           "size": 7,
           "rule": "Temp > 82 & Wind > 10.3",
+          "terminal": false,
           "responsessum": [
             {
               "minimum": 32,
@@ -273,8 +274,7 @@
               "q3": 57.5,
               "maximum": 71
             }
-          ],
-          "terminal": false
+          ]
         }
       ]
     },
@@ -282,6 +282,7 @@
       "name": 8,
       "size": 30,
       "rule": "Temp > 82 & Wind <= 10.3",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 35,
@@ -291,13 +292,13 @@
           "q3": 94.75,
           "maximum": 135
         }
-      ],
-      "terminal": false
+      ]
     },
     {
       "name": 9,
       "size": 7,
       "rule": "Temp > 82 & Wind > 10.3",
+      "terminal": false,
       "responsessum": [
         {
           "minimum": 32,
@@ -307,8 +308,7 @@
           "q3": 57.5,
           "maximum": 71
         }
-      ],
-      "terminal": false
+      ]
     }
   ]
 }
