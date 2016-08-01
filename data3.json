@@ -12,6 +12,7 @@
       "maximum": 168
     }
   ],
+  "terminal": true,
   "children": [
     {
       "name": 2,
@@ -27,6 +28,7 @@
           "maximum": 168
         }
       ],
+      "terminal": true,
       "children": [
         {
           "name": 3,
@@ -41,7 +43,8 @@
               "q3": 56.25,
               "maximum": 168
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 4,
@@ -57,6 +60,7 @@
               "maximum": 65
             }
           ],
+          "terminal": true,
           "children": [
             {
               "name": 5,
@@ -71,7 +75,8 @@
                   "q3": 23,
                   "maximum": 41
                 }
-              ]
+              ],
+              "terminal": false
             },
             {
               "name": 6,
@@ -86,7 +91,8 @@
                   "q3": 44,
                   "maximum": 65
                 }
-              ]
+              ],
+              "terminal": false
             }
           ]
         },
@@ -103,7 +109,8 @@
               "q3": 23,
               "maximum": 41
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 6,
@@ -118,7 +125,8 @@
               "q3": 44,
               "maximum": 65
             }
-          ]
+          ],
+          "terminal": false
         }
       ]
     },
@@ -135,7 +143,8 @@
           "q3": 56.25,
           "maximum": 168
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 4,
@@ -151,6 +160,7 @@
           "maximum": 65
         }
       ],
+      "terminal": true,
       "children": [
         {
           "name": 5,
@@ -165,7 +175,8 @@
               "q3": 23,
               "maximum": 41
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 6,
@@ -180,7 +191,8 @@
               "q3": 44,
               "maximum": 65
             }
-          ]
+          ],
+          "terminal": false
         }
       ]
     },
@@ -197,7 +209,8 @@
           "q3": 23,
           "maximum": 41
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 6,
@@ -212,7 +225,8 @@
           "q3": 44,
           "maximum": 65
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 7,
@@ -228,6 +242,7 @@
           "maximum": 135
         }
       ],
+      "terminal": true,
       "children": [
         {
           "name": 8,
@@ -242,7 +257,8 @@
               "q3": 94.75,
               "maximum": 135
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 9,
@@ -257,7 +273,8 @@
               "q3": 57.5,
               "maximum": 71
             }
-          ]
+          ],
+          "terminal": false
         }
       ]
     },
@@ -274,7 +291,8 @@
           "q3": 94.75,
           "maximum": 135
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 9,
@@ -289,7 +307,8 @@
           "q3": 57.5,
           "maximum": 71
         }
-      ]
+      ],
+      "terminal": false
     }
   ]
 }

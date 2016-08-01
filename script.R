@@ -62,12 +62,13 @@ tree_list <- function(tree, node = 1){
   if (length(children) == 1) {
 
     str <- list(name = children, size = size, rule = rule,
-                responsessum = responsessum)
+                responsessum = responsessum, terminal = FALSE)
     
   } else {
 
     str <- list(name = node, size = size, rule = rule,
-                responsessum = responsessum, children = NULL)
+                responsessum = responsessum, terminal = TRUE,
+                children = NULL)
     
     children2 <- setdiff(children, node)
     

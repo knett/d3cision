@@ -16,6 +16,7 @@
       "x": 50
     }
   ],
+  "terminal": true,
   "children": [
     {
       "name": 2,
@@ -34,7 +35,8 @@
           "names": "virginica",
           "x": 0
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 3,
@@ -54,6 +56,7 @@
           "x": 50
         }
       ],
+      "terminal": true,
       "children": [
         {
           "name": 4,
@@ -73,6 +76,7 @@
               "x": 5
             }
           ],
+          "terminal": true,
           "children": [
             {
               "name": 5,
@@ -91,7 +95,8 @@
                   "names": "virginica",
                   "x": 1
                 }
-              ]
+              ],
+              "terminal": false
             },
             {
               "name": 6,
@@ -110,7 +115,8 @@
                   "names": "virginica",
                   "x": 4
                 }
-              ]
+              ],
+              "terminal": false
             }
           ]
         },
@@ -131,7 +137,8 @@
               "names": "virginica",
               "x": 1
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 6,
@@ -150,7 +157,8 @@
               "names": "virginica",
               "x": 4
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 7,
@@ -169,7 +177,8 @@
               "names": "virginica",
               "x": 45
             }
-          ]
+          ],
+          "terminal": false
         }
       ]
     },
@@ -191,6 +200,7 @@
           "x": 5
         }
       ],
+      "terminal": true,
       "children": [
         {
           "name": 5,
@@ -209,7 +219,8 @@
               "names": "virginica",
               "x": 1
             }
-          ]
+          ],
+          "terminal": false
         },
         {
           "name": 6,
@@ -228,7 +239,8 @@
               "names": "virginica",
               "x": 4
             }
-          ]
+          ],
+          "terminal": false
         }
       ]
     },
@@ -249,7 +261,8 @@
           "names": "virginica",
           "x": 1
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 6,
@@ -268,7 +281,8 @@
           "names": "virginica",
           "x": 4
         }
-      ]
+      ],
+      "terminal": false
     },
     {
       "name": 7,
@@ -287,7 +301,8 @@
           "names": "virginica",
           "x": 45
         }
-      ]
+      ],
+      "terminal": false
     }
   ]
 }
