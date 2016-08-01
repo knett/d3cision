@@ -1,112 +1,111 @@
-# party -------------------------------------------------------------------
-# http://bl.ocks.org/timelyportfolio/adc2dfee7aef48ce5485
-
-library(partykit)
-
-x <- ctree(Species ~ ., data = iris)
-
-plot(x)
-
-attributes(x)
-
-str(x$info)
-
-str(x$node)
-
-x$node$id
-x$node$split
-
-
-as.list(x$node)
-
-
-
-jsonlite::toJSON(as.list(x$node), pretty = TRUE)
-str(x[[1]])
-
-x[[1]]
-
-get
-
-class(x[[1]])
-class(x[[1]][[1]])
-
-y <- x[[1]][[4]]
-y <- x[[1]][[7]]
-partykit::surrogates_node()
-class(y)
-length(y)
-toString(y)
-str(y)
-
-get_childrens <- function(x) {
-  
-  if(length(x) > 0)
-    purrr::map(x, get_childrens)
-  else 
-    return(list("a" = 2))
-  
-}
-
-get_childrens(x[[1]])
-
-class(x[[1]][[4]])
-x[[1]][[7]]
-
-attr(x, "tree")
-
-get_ctree_parts <- function(x, ...)
-{
-  UseMethod("get_ctree_parts")
-}
-
-get_ctree_parts.BinaryTree <- function(x, ...)
-{
-  get_ctree_parts(attr(x, "tree"))
-}
-
-get_ctree_parts.constparty <- function(x, ...)
-{
-  get_ctree_parts(attr(x, "tree"))
-}
-
-get_ctree_parts.SplittingNode <- function(x, ...)
-{
-  with(
-    x,
-    list(
-      name       = toString(nodeID),
-      children   = list(get_ctree_parts(x$left),get_ctree_parts(x$right))
-      
-    )
-  )
-}
-
-get_ctree_parts.TerminalNode <- function(x, ...)
-{
-  with(
-    x,
-    list(
-      name = paste(nodeID,"weights",sum(weights),"prediaction",toString(paste("[",toString(prediction),"]",sep=" ")),sep = " ")
-      
-    )
-  )
-}
-
-class(irisct)
-x <- irisct
-
-partykit:::print.partynode
-partykit:::print.constparty
-
-
-jsonlite::toJSON(get_ctree_parts(as.party(irisct)))
-
-# rpart -------------------------------------------------------------------
+rm(list = ls())
 library(rpart)
+library(partykit)
+library(jsonlite)
+library(magrittr)
+library(purrr)
+library(broom)
 
-fit <- rpart(Kyphosis ~ Age + Number + Start, method = "class", data = kyphosis)
-fit
-plot(fit)
-text(fit)
-str(fit)
+# http://stackoverflow.com/questions/34196611/converting-rpart-output-into-json-format-in-r
+
+# json_prsr <- function(tree, node = 1, node_stats = NULL){
+#   
+#   # Checking the decision tree object
+#   if(!is(tree, c("constparty","party")))
+#     tree <- partykit::as.party(tree)
+#   
+#   # Parsing into json format
+#   str  <- ""
+#   rule <- partykit:::.list.rules.party(tree, node)
+#   
+#   if(is.null(node_stats))
+#     node_stats <- table(tree$fitted[1])
+#   
+#   children <- partykit::nodeids(tree, node)
+#   
+#   if (length(children) == 1) {
+#     ct  <- node_stats[as.character(children)]
+#     str <- paste("{ ","name : '",children,"',size :",ct,",rule :'",rule,"' }", sep='')
+#   } else {
+#     str <- paste("{ ","name : '", node,"', rule : '", rule, "', children : [", sep='')
+#     for(child in children){
+#       check <- paste("{ name : '", child, "'", sep='')
+#       if(child != node & ( !grepl(check, str, fixed=TRUE) ) ) {
+#         child_str <- json_prsr(tree, child, node_stats)
+#         str <- paste(str, child_str, ',', sep='')
+#       }
+#     }
+#     str <- substr(str, 1, nchar(str)-1) #Remove the comma
+#     str <- paste(str,"]}", sep='')
+#   }
+#   return(str)
+# }
+# 
+# json <- json_prsr(rpk)
+# json <- paste("[", json, "]")
+
+
+tree_list <- function(tree, node = 1){
+  
+  # Checking the decision tree object
+  if(!is(tree, c("constparty","party")))
+    tree <- partykit::as.party(tree)
+  
+  rule <- partykit:::.list.rules.party(tree, node)
+  node_stats <- table(tree$fitted[1])
+  children <- partykit::nodeids(tree, node)
+  size <- sum(node_stats[as.character(children)], na.rm = TRUE)
+  
+  responsessum <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
+
+  if (length(children) == 1) {
+
+    str <- list(name = children, size = size, rule = rule,
+                responsessum = responsessum)
+    
+  } else {
+
+    str <- list(name = node, size = size, rule = rule,
+                responsessum = responsessum, children = NULL)
+    
+    children2 <- setdiff(children, node)
+    
+    str$children <- map(children2, tree_list, tree = tree)
+
+  }
+  return(str)
+}
+
+
+# EXAMPLE 1 ---------------------------------------------------------------
+tree <- rpart(hp ~ ., data = mtcars, control = rpart.control(minsplit = 4))
+tree <- as.party(tree)
+
+plot(tree)
+
+tree %>% 
+  tree_list() %>% 
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
+  writeLines(con = "data1.json")
+
+
+# EXAMPLE 2 ---------------------------------------------------------------
+tree <- ctree(Species ~ .,data = iris)
+plot(tree)
+
+tree %>% 
+  tree_list() %>% 
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
+  writeLines(con = "data2.json")
+
+nodeapply(tree, id = seq(width(tree)), function(n) info_node(n))
+
+
+# EXAMPLE 3 ---------------------------------------------------------------
+tree <- ctree(Ozone ~ ., data = subset(airquality, !is.na(Ozone)))
+plot(tree)
+
+tree %>% 
+  tree_list() %>% 
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
+  writeLines(con = "data3.json")
