@@ -52,9 +52,10 @@ tree_list <- function(tree, node = 1){
     tree <- partykit::as.party(tree)
   
   rule <- partykit:::.list.rules.party(tree, node)
-  node_stats <- table(tree$fitted[1])
+
   children <- partykit::nodeids(tree, node)
-  size <- sum(node_stats[as.character(children)], na.rm = TRUE)
+  
+  size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
   
   responsessum <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
 
