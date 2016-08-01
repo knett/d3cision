@@ -52,7 +52,6 @@ tree_list <- function(tree, node = 1){
     tree <- partykit::as.party(tree)
   
   rule <- partykit:::.list.rules.party(tree, node)
-
   children <- partykit::nodeids(tree, node)
   size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
   depth <-  depth(tree[[node]])
@@ -61,12 +60,13 @@ tree_list <- function(tree, node = 1){
   isterminal <- length(children) == 1
   
   str <- list(
-    name = ifelse(isterminal, children, node),
+    name = node,
     size = size,
     depth = depth,
     rule = rule,
     terminal = isterminal,
-    summary = summary
+    summary = summary,
+    nchildren = length(children) - 1
   )
   
   if (!isterminal) {
@@ -74,9 +74,10 @@ tree_list <- function(tree, node = 1){
     children2 <- setdiff(children, node)
     str$children <- map(children2, tree_list, tree = tree)
     
-
   }
+  
   return(str)
+  
 }
 
 

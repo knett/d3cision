@@ -14,6 +14,7 @@
       "maximum": 335
     }
   ],
+  "nchildren": 14,
   "children": [
     {
       "name": 2,
@@ -31,6 +32,7 @@
           "maximum": 175
         }
       ],
+      "nchildren": 6,
       "children": [
         {
           "name": 3,
@@ -48,6 +50,7 @@
               "maximum": 113
             }
           ],
+          "nchildren": 2,
           "children": [
             {
               "name": 4,
@@ -64,7 +67,8 @@
                   "q3": 66,
                   "maximum": 66
                 }
-              ]
+              ],
+              "nchildren": 0
             },
             {
               "name": 5,
@@ -81,7 +85,8 @@
                   "q3": 96.5,
                   "maximum": 113
                 }
-              ]
+              ],
+              "nchildren": 0
             }
           ]
         },
@@ -100,7 +105,8 @@
               "q3": 66,
               "maximum": 66
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 5,
@@ -117,7 +123,8 @@
               "q3": 96.5,
               "maximum": 113
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 6,
@@ -135,6 +142,7 @@
               "maximum": 175
             }
           ],
+          "nchildren": 2,
           "children": [
             {
               "name": 7,
@@ -151,7 +159,8 @@
                   "q3": 116.5,
                   "maximum": 123
                 }
-              ]
+              ],
+              "nchildren": 0
             },
             {
               "name": 8,
@@ -168,7 +177,8 @@
                   "q3": 175,
                   "maximum": 175
                 }
-              ]
+              ],
+              "nchildren": 0
             }
           ]
         },
@@ -187,7 +197,8 @@
               "q3": 116.5,
               "maximum": 123
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 8,
@@ -204,7 +215,8 @@
               "q3": 175,
               "maximum": 175
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -224,6 +236,7 @@
           "maximum": 113
         }
       ],
+      "nchildren": 2,
       "children": [
         {
           "name": 4,
@@ -240,7 +253,8 @@
               "q3": 66,
               "maximum": 66
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 5,
@@ -257,7 +271,8 @@
               "q3": 96.5,
               "maximum": 113
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -276,7 +291,8 @@
           "q3": 66,
           "maximum": 66
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 5,
@@ -293,7 +309,8 @@
           "q3": 96.5,
           "maximum": 113
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 6,
@@ -311,6 +328,7 @@
           "maximum": 175
         }
       ],
+      "nchildren": 2,
       "children": [
         {
           "name": 7,
@@ -327,7 +345,8 @@
               "q3": 116.5,
               "maximum": 123
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 8,
@@ -344,7 +363,8 @@
               "q3": 175,
               "maximum": 175
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -363,7 +383,8 @@
           "q3": 116.5,
           "maximum": 123
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 8,
@@ -380,7 +401,8 @@
           "q3": 175,
           "maximum": 175
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 9,
@@ -398,6 +420,7 @@
           "maximum": 335
         }
       ],
+      "nchildren": 6,
       "children": [
         {
           "name": 10,
@@ -415,6 +438,7 @@
               "maximum": 215
             }
           ],
+          "nchildren": 2,
           "children": [
             {
               "name": 11,
@@ -431,7 +455,8 @@
                   "q3": 180,
                   "maximum": 180
                 }
-              ]
+              ],
+              "nchildren": 0
             },
             {
               "name": 12,
@@ -448,7 +473,8 @@
                   "q3": 212.5,
                   "maximum": 215
                 }
-              ]
+              ],
+              "nchildren": 0
             }
           ]
         },
@@ -467,7 +493,8 @@
               "q3": 180,
               "maximum": 180
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 12,
@@ -484,7 +511,8 @@
               "q3": 212.5,
               "maximum": 215
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 13,
@@ -502,6 +530,7 @@
               "maximum": 335
             }
           ],
+          "nchildren": 2,
           "children": [
             {
               "name": 14,
@@ -518,7 +547,8 @@
                   "q3": 249.8,
                   "maximum": 264
                 }
-              ]
+              ],
+              "nchildren": 0
             },
             {
               "name": 15,
@@ -535,7 +565,8 @@
                   "q3": 335,
                   "maximum": 335
                 }
-              ]
+              ],
+              "nchildren": 0
             }
           ]
         },
@@ -554,7 +585,8 @@
               "q3": 249.8,
               "maximum": 264
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 15,
@@ -571,7 +603,8 @@
               "q3": 335,
               "maximum": 335
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -591,6 +624,7 @@
           "maximum": 215
         }
       ],
+      "nchildren": 2,
       "children": [
         {
           "name": 11,
@@ -607,7 +641,8 @@
               "q3": 180,
               "maximum": 180
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 12,
@@ -624,7 +659,8 @@
               "q3": 212.5,
               "maximum": 215
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -643,7 +679,8 @@
           "q3": 180,
           "maximum": 180
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 12,
@@ -660,7 +697,8 @@
           "q3": 212.5,
           "maximum": 215
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 13,
@@ -678,6 +716,7 @@
           "maximum": 335
         }
       ],
+      "nchildren": 2,
       "children": [
         {
           "name": 14,
@@ -694,7 +733,8 @@
               "q3": 249.8,
               "maximum": 264
             }
-          ]
+          ],
+          "nchildren": 0
         },
         {
           "name": 15,
@@ -711,7 +751,8 @@
               "q3": 335,
               "maximum": 335
             }
-          ]
+          ],
+          "nchildren": 0
         }
       ]
     },
@@ -730,7 +771,8 @@
           "q3": 249.8,
           "maximum": 264
         }
-      ]
+      ],
+      "nchildren": 0
     },
     {
       "name": 15,
@@ -747,7 +789,8 @@
           "q3": 335,
           "maximum": 335
         }
-      ]
+      ],
+      "nchildren": 0
     }
   ]
 }
