@@ -1,9 +1,10 @@
 {
   "name": 1,
   "size": 150,
+  "depth": 3,
   "rule": "",
-  "terminal": true,
-  "responsessum": [
+  "terminal": false,
+  "summary": [
     {
       "names": "setosa",
       "x": 50
@@ -21,9 +22,10 @@
     {
       "name": 2,
       "size": 50,
+      "depth": 0,
       "rule": "Petal.Length <= 1.9",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "names": "setosa",
           "x": 50
@@ -41,9 +43,10 @@
     {
       "name": 3,
       "size": 100,
+      "depth": 2,
       "rule": "Petal.Length > 1.9",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "names": "setosa",
           "x": 0
@@ -61,9 +64,10 @@
         {
           "name": 4,
           "size": 54,
+          "depth": 1,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -81,9 +85,10 @@
             {
               "name": 5,
               "size": 46,
+              "depth": 0,
               "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "names": "setosa",
                   "x": 0
@@ -101,9 +106,10 @@
             {
               "name": 6,
               "size": 8,
+              "depth": 0,
               "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "names": "setosa",
                   "x": 0
@@ -123,9 +129,10 @@
         {
           "name": 5,
           "size": 46,
+          "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -143,9 +150,10 @@
         {
           "name": 6,
           "size": 8,
+          "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -163,9 +171,10 @@
         {
           "name": 7,
           "size": 46,
+          "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -185,9 +194,10 @@
     {
       "name": 4,
       "size": 54,
+      "depth": 1,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "names": "setosa",
           "x": 0
@@ -205,9 +215,10 @@
         {
           "name": 5,
           "size": 46,
+          "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -225,9 +236,10 @@
         {
           "name": 6,
           "size": 8,
+          "depth": 0,
           "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "names": "setosa",
               "x": 0
@@ -247,9 +259,10 @@
     {
       "name": 5,
       "size": 46,
+      "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length <= 4.8",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "names": "setosa",
           "x": 0
@@ -267,9 +280,10 @@
     {
       "name": 6,
       "size": 8,
+      "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width <= 1.7 & Petal.Length > 4.8",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "names": "setosa",
           "x": 0
@@ -287,9 +301,10 @@
     {
       "name": 7,
       "size": 46,
+      "depth": 0,
       "rule": "Petal.Length > 1.9 & Petal.Width > 1.7",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "names": "setosa",
           "x": 0

@@ -54,25 +54,26 @@ tree_list <- function(tree, node = 1){
   rule <- partykit:::.list.rules.party(tree, node)
 
   children <- partykit::nodeids(tree, node)
-  
   size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
+  depth <-  depth(tree[[node]])
+  summary <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
+
+  isterminal <- length(children) == 1
   
-  responsessum <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
+  str <- list(
+    name = ifelse(isterminal, children, node),
+    size = size,
+    depth = depth,
+    rule = rule,
+    terminal = isterminal,
+    summary = summary
+  )
+  
+  if (!isterminal) {
 
-  if (length(children) == 1) {
-
-    str <- list(name = children, size = size, rule = rule, terminal = FALSE,
-                responsessum = responsessum)
-    
-  } else {
-
-    str <- list(name = node, size = size, rule = rule, terminal = TRUE,
-                responsessum = responsessum,
-                children = NULL)
-    
     children2 <- setdiff(children, node)
-    
     str$children <- map(children2, tree_list, tree = tree)
+    
 
   }
   return(str)

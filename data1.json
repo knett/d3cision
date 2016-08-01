@@ -1,9 +1,10 @@
 {
   "name": 1,
   "size": 32,
+  "depth": 3,
   "rule": "",
-  "terminal": true,
-  "responsessum": [
+  "terminal": false,
+  "summary": [
     {
       "minimum": 52,
       "q1": 96.5,
@@ -17,9 +18,10 @@
     {
       "name": 2,
       "size": 18,
+      "depth": 2,
       "rule": "cyl < 7",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 52,
           "q1": 72.25,
@@ -33,9 +35,10 @@
         {
           "name": 3,
           "size": 10,
+          "depth": 1,
           "rule": "cyl < 7 & mpg >= 21.45",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "minimum": 52,
               "q1": 65.25,
@@ -49,9 +52,10 @@
             {
               "name": 4,
               "size": 4,
+              "depth": 0,
               "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 52,
                   "q1": 61.75,
@@ -65,9 +69,10 @@
             {
               "name": 5,
               "size": 6,
+              "depth": 0,
               "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 62,
                   "q1": 91.5,
@@ -83,9 +88,10 @@
         {
           "name": 4,
           "size": 4,
+          "depth": 0,
           "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 52,
               "q1": 61.75,
@@ -99,9 +105,10 @@
         {
           "name": 5,
           "size": 6,
+          "depth": 0,
           "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 62,
               "q1": 91.5,
@@ -115,9 +122,10 @@
         {
           "name": 6,
           "size": 8,
+          "depth": 1,
           "rule": "cyl < 7 & mpg < 21.45",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "minimum": 105,
               "q1": 109.8,
@@ -131,9 +139,10 @@
             {
               "name": 7,
               "size": 7,
+              "depth": 0,
               "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 105,
                   "q1": 109.5,
@@ -147,9 +156,10 @@
             {
               "name": 8,
               "size": 1,
+              "depth": 0,
               "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 175,
                   "q1": 175,
@@ -165,9 +175,10 @@
         {
           "name": 7,
           "size": 7,
+          "depth": 0,
           "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 105,
               "q1": 109.5,
@@ -181,9 +192,10 @@
         {
           "name": 8,
           "size": 1,
+          "depth": 0,
           "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 175,
               "q1": 175,
@@ -199,9 +211,10 @@
     {
       "name": 3,
       "size": 10,
+      "depth": 1,
       "rule": "cyl < 7 & mpg >= 21.45",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 52,
           "q1": 65.25,
@@ -215,9 +228,10 @@
         {
           "name": 4,
           "size": 4,
+          "depth": 0,
           "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 52,
               "q1": 61.75,
@@ -231,9 +245,10 @@
         {
           "name": 5,
           "size": 6,
+          "depth": 0,
           "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 62,
               "q1": 91.5,
@@ -249,9 +264,10 @@
     {
       "name": 4,
       "size": 4,
+      "depth": 0,
       "rule": "cyl < 7 & mpg >= 21.45 & disp < 87.05",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 52,
           "q1": 61.75,
@@ -265,9 +281,10 @@
     {
       "name": 5,
       "size": 6,
+      "depth": 0,
       "rule": "cyl < 7 & mpg >= 21.45 & disp >= 87.05",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 62,
           "q1": 91.5,
@@ -281,9 +298,10 @@
     {
       "name": 6,
       "size": 8,
+      "depth": 1,
       "rule": "cyl < 7 & mpg < 21.45",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 105,
           "q1": 109.8,
@@ -297,9 +315,10 @@
         {
           "name": 7,
           "size": 7,
+          "depth": 0,
           "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 105,
               "q1": 109.5,
@@ -313,9 +332,10 @@
         {
           "name": 8,
           "size": 1,
+          "depth": 0,
           "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 175,
               "q1": 175,
@@ -331,9 +351,10 @@
     {
       "name": 7,
       "size": 7,
+      "depth": 0,
       "rule": "cyl < 7 & mpg < 21.45 & qsec >= 15.98",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 105,
           "q1": 109.5,
@@ -347,9 +368,10 @@
     {
       "name": 8,
       "size": 1,
+      "depth": 0,
       "rule": "cyl < 7 & mpg < 21.45 & qsec < 15.98",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 175,
           "q1": 175,
@@ -363,9 +385,10 @@
     {
       "name": 9,
       "size": 14,
+      "depth": 2,
       "rule": "cyl >= 7",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 150,
           "q1": 176.2,
@@ -379,9 +402,10 @@
         {
           "name": 10,
           "size": 9,
+          "depth": 1,
           "rule": "cyl >= 7 & drat < 3.18",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "minimum": 150,
               "q1": 175,
@@ -395,9 +419,10 @@
             {
               "name": 11,
               "size": 7,
+              "depth": 0,
               "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 150,
                   "q1": 162.5,
@@ -411,9 +436,10 @@
             {
               "name": 12,
               "size": 2,
+              "depth": 0,
               "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 205,
                   "q1": 207.5,
@@ -429,9 +455,10 @@
         {
           "name": 11,
           "size": 7,
+          "depth": 0,
           "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 150,
               "q1": 162.5,
@@ -445,9 +472,10 @@
         {
           "name": 12,
           "size": 2,
+          "depth": 0,
           "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 205,
               "q1": 207.5,
@@ -461,9 +489,10 @@
         {
           "name": 13,
           "size": 5,
+          "depth": 1,
           "rule": "cyl >= 7 & drat >= 3.18",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "minimum": 230,
               "q1": 245,
@@ -477,9 +506,10 @@
             {
               "name": 14,
               "size": 4,
+              "depth": 0,
               "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 230,
                   "q1": 241.2,
@@ -493,9 +523,10 @@
             {
               "name": 15,
               "size": 1,
+              "depth": 0,
               "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 335,
                   "q1": 335,
@@ -511,9 +542,10 @@
         {
           "name": 14,
           "size": 4,
+          "depth": 0,
           "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 230,
               "q1": 241.2,
@@ -527,9 +559,10 @@
         {
           "name": 15,
           "size": 1,
+          "depth": 0,
           "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 335,
               "q1": 335,
@@ -545,9 +578,10 @@
     {
       "name": 10,
       "size": 9,
+      "depth": 1,
       "rule": "cyl >= 7 & drat < 3.18",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 150,
           "q1": 175,
@@ -561,9 +595,10 @@
         {
           "name": 11,
           "size": 7,
+          "depth": 0,
           "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 150,
               "q1": 162.5,
@@ -577,9 +612,10 @@
         {
           "name": 12,
           "size": 2,
+          "depth": 0,
           "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 205,
               "q1": 207.5,
@@ -595,9 +631,10 @@
     {
       "name": 11,
       "size": 7,
+      "depth": 0,
       "rule": "cyl >= 7 & drat < 3.18 & mpg >= 12.8",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 150,
           "q1": 162.5,
@@ -611,9 +648,10 @@
     {
       "name": 12,
       "size": 2,
+      "depth": 0,
       "rule": "cyl >= 7 & drat < 3.18 & mpg < 12.8",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 205,
           "q1": 207.5,
@@ -627,9 +665,10 @@
     {
       "name": 13,
       "size": 5,
+      "depth": 1,
       "rule": "cyl >= 7 & drat >= 3.18",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 230,
           "q1": 245,
@@ -643,9 +682,10 @@
         {
           "name": 14,
           "size": 4,
+          "depth": 0,
           "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 230,
               "q1": 241.2,
@@ -659,9 +699,10 @@
         {
           "name": 15,
           "size": 1,
+          "depth": 0,
           "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 335,
               "q1": 335,
@@ -677,9 +718,10 @@
     {
       "name": 14,
       "size": 4,
+      "depth": 0,
       "rule": "cyl >= 7 & drat >= 3.18 & carb < 6",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 230,
           "q1": 241.2,
@@ -693,9 +735,10 @@
     {
       "name": 15,
       "size": 1,
+      "depth": 0,
       "rule": "cyl >= 7 & drat >= 3.18 & carb >= 6",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 335,
           "q1": 335,

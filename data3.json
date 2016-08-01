@@ -1,9 +1,10 @@
 {
   "name": 1,
   "size": 116,
+  "depth": 3,
   "rule": "",
-  "terminal": true,
-  "responsessum": [
+  "terminal": false,
+  "summary": [
     {
       "minimum": 1,
       "q1": 18,
@@ -17,9 +18,10 @@
     {
       "name": 2,
       "size": 79,
+      "depth": 2,
       "rule": "Temp <= 82",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 1,
           "q1": 13.5,
@@ -33,9 +35,10 @@
         {
           "name": 3,
           "size": 10,
+          "depth": 0,
           "rule": "Temp <= 82 & Wind <= 6.9",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 7,
               "q1": 28.5,
@@ -49,9 +52,10 @@
         {
           "name": 4,
           "size": 69,
+          "depth": 1,
           "rule": "Temp <= 82 & Wind > 6.9",
-          "terminal": true,
-          "responsessum": [
+          "terminal": false,
+          "summary": [
             {
               "minimum": 1,
               "q1": 13,
@@ -65,9 +69,10 @@
             {
               "name": 5,
               "size": 48,
+              "depth": 0,
               "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 1,
                   "q1": 12,
@@ -81,9 +86,10 @@
             {
               "name": 6,
               "size": 21,
+              "depth": 0,
               "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
-              "terminal": false,
-              "responsessum": [
+              "terminal": true,
+              "summary": [
                 {
                   "minimum": 7,
                   "q1": 20,
@@ -99,9 +105,10 @@
         {
           "name": 5,
           "size": 48,
+          "depth": 0,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 1,
               "q1": 12,
@@ -115,9 +122,10 @@
         {
           "name": 6,
           "size": 21,
+          "depth": 0,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 7,
               "q1": 20,
@@ -133,9 +141,10 @@
     {
       "name": 3,
       "size": 10,
+      "depth": 0,
       "rule": "Temp <= 82 & Wind <= 6.9",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 7,
           "q1": 28.5,
@@ -149,9 +158,10 @@
     {
       "name": 4,
       "size": 69,
+      "depth": 1,
       "rule": "Temp <= 82 & Wind > 6.9",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 1,
           "q1": 13,
@@ -165,9 +175,10 @@
         {
           "name": 5,
           "size": 48,
+          "depth": 0,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 1,
               "q1": 12,
@@ -181,9 +192,10 @@
         {
           "name": 6,
           "size": 21,
+          "depth": 0,
           "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 7,
               "q1": 20,
@@ -199,9 +211,10 @@
     {
       "name": 5,
       "size": 48,
+      "depth": 0,
       "rule": "Temp <= 82 & Wind > 6.9 & Temp <= 77",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 1,
           "q1": 12,
@@ -215,9 +228,10 @@
     {
       "name": 6,
       "size": 21,
+      "depth": 0,
       "rule": "Temp <= 82 & Wind > 6.9 & Temp > 77",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 7,
           "q1": 20,
@@ -231,9 +245,10 @@
     {
       "name": 7,
       "size": 37,
+      "depth": 1,
       "rule": "Temp > 82",
-      "terminal": true,
-      "responsessum": [
+      "terminal": false,
+      "summary": [
         {
           "minimum": 32,
           "q1": 61,
@@ -247,9 +262,10 @@
         {
           "name": 8,
           "size": 30,
+          "depth": 0,
           "rule": "Temp > 82 & Wind <= 10.3",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 35,
               "q1": 67.75,
@@ -263,9 +279,10 @@
         {
           "name": 9,
           "size": 7,
+          "depth": 0,
           "rule": "Temp > 82 & Wind > 10.3",
-          "terminal": false,
-          "responsessum": [
+          "terminal": true,
+          "summary": [
             {
               "minimum": 32,
               "q1": 39.5,
@@ -281,9 +298,10 @@
     {
       "name": 8,
       "size": 30,
+      "depth": 0,
       "rule": "Temp > 82 & Wind <= 10.3",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 35,
           "q1": 67.75,
@@ -297,9 +315,10 @@
     {
       "name": 9,
       "size": 7,
+      "depth": 0,
       "rule": "Temp > 82 & Wind > 10.3",
-      "terminal": false,
-      "responsessum": [
+      "terminal": true,
+      "summary": [
         {
           "minimum": 32,
           "q1": 39.5,
