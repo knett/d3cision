@@ -21,17 +21,17 @@ library(dplyr)
 #   
 #   if(is.null(node_stats))
 #     node_stats <- table(tree$fitted[1])
-#   
 #   children <- partykit::nodeids(tree, node)
 #   
 #   if (length(children) == 1) {
 #     ct  <- node_stats[as.character(children)]
-#     str <- paste("{ ","name : '",children,"',size :",ct,",rule :'",rule,"' }", sep='')
+#     str <- paste("{","'name': '",children,"','size':",ct,",'rule':'",rule,"'}", sep='')
 #   } else {
-#     str <- paste("{ ","name : '", node,"', rule : '", rule, "', children : [", sep='')
+#     str <- paste("{","'name': '", node,"', 'rule': '", rule, "', 'children': [", sep='')
 #     for(child in children){
-#       check <- paste("{ name : '", child, "'", sep='')
+#       check <- paste("{'name': '", child, "'", sep='')
 #       if(child != node & ( !grepl(check, str, fixed=TRUE) ) ) {
+#         print(child)
 #         child_str <- json_prsr(tree, child, node_stats)
 #         str <- paste(str, child_str, ',', sep='')
 #       }
@@ -41,10 +41,6 @@ library(dplyr)
 #   }
 #   return(str)
 # }
-# 
-# json <- json_prsr(rpk)
-# json <- paste("[", json, "]")
-
 
 tree_list <- function(tree, node = 1){
   
@@ -75,7 +71,15 @@ tree_list <- function(tree, node = 1){
   if (!isterminal) {
 
     children2 <- setdiff(children, node)
-    str$children <- map(children2, tree_list, tree = tree)
+    children22 <- map(children2, partykit::nodeids, obj = tree)
+    
+    nochildren <- map2(children22, children2, setdiff) %>% 
+      unlist() %>% 
+      unique()
+    
+    childrenf <- setdiff(children2, nochildren)
+    
+    str$children <- map(childrenf, tree_list, tree = tree)
     
   }
   
@@ -94,7 +98,6 @@ tree %>%
   tree_list() %>% 
   toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
   writeLines(con = "data1.json")
-
 
 # EXAMPLE 2 ---------------------------------------------------------------
 tree <- ctree(Species ~ .,data = iris)
@@ -116,3 +119,8 @@ tree %>%
   tree_list() %>% 
   toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
   writeLines(con = "data3.json")
+
+# tree %>% 
+#   json_prsr() %>% 
+#   as.character() %>% 
+#   writeLines(con = "data3.json")
