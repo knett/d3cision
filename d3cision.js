@@ -71,8 +71,6 @@ function d3cision() {
         .style("text-anchor", "middle")
         .text(function(d) { return d.data.rule; });
 
-     
-
     });
     
   }
