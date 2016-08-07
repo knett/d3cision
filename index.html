@@ -3,8 +3,8 @@
 <style>
 #container {
   background-color: #EEE;
-  width: 800px;
-  height: 600px;
+  width: 1000px;
+  height: 500px;
 }
 
 .node circle {
@@ -13,7 +13,7 @@
   stroke-width: 3px;
 }
 
-.node text { font: 12px sans-serif; }
+.node text { font: 10px sans-serif; }
 
 .node--internal text {
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
@@ -35,9 +35,11 @@
 <script>
   console.log("ready")
   
-  d3.json("data3.json", function(data) {
+  d3.json("data4.json", function(data) {
 
     var tree = d3cision()
+      .shapelink(0.75)
+      .separation(0.00)
     
     d3.select("#container")
       .datum(data)

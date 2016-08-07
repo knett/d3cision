@@ -42,6 +42,17 @@ library(dplyr)
 #   return(str)
 # }
 
+
+summ <- function(x) {
+  
+  if(class(x) %in% c("numeric", "integer")) {
+    res <- tidy(summary(x))
+  } else {
+    res <- count(data_frame(class = x), class)
+  }
+  res
+}
+
 tree_list <- function(tree, node = 1){
   
   # Checking the decision tree object
@@ -52,7 +63,7 @@ tree_list <- function(tree, node = 1){
   children <- partykit::nodeids(tree, node)
   size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
   depth <-  depth(tree[[node]])
-  summary <- tidy(summary(tree[[node]]$fitted[["(response)"]]))
+  summary <- summ(tree[[node]]$fitted[["(response)"]])
   rule <- last(unlist(str_split(completerule, "\\s+&\\s+")))
 
   isterminal <- length(children) == 1
@@ -108,19 +119,36 @@ tree %>%
   toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
   writeLines(con = "data2.json")
 
-nodeapply(tree, id = seq(width(tree)), function(n) info_node(n))
-
-
 # EXAMPLE 3 ---------------------------------------------------------------
 tree <- ctree(Ozone ~ ., data = subset(airquality, !is.na(Ozone)))
 plot(tree)
 
-tree %>% 
-  tree_list() %>% 
-  toJSON(auto_unbox = TRUE, pretty = TRUE) %>% 
+tree %>%
+  tree_list() %>%
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
   writeLines(con = "data3.json")
 
 # tree %>% 
 #   json_prsr() %>% 
 #   as.character() %>% 
 #   writeLines(con = "data3.json")
+
+# EXAMPLE 4 ---------------------------------------------------------------
+data(credit, package = "riskr")
+credit2 <- credit %>%
+  tbl_df() %>% 
+  filter(complete.cases(credit)) %>%
+  select(-id_client) %>% 
+  sample_n(3000) %>% 
+  mutate(bad = ifelse(bad == 0, "bad", "good"),
+         bad = factor(bad)) %>% 
+  map_if(is.character, as.factor) %>% 
+  as_data_frame()
+
+tree <- ctree(bad ~ ., data = credit2, control = ctree_control(mincriterion = 0.60))
+plot(tree)
+
+tree %>%
+  tree_list() %>%
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
+  writeLines(con = "data4.json")

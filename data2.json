@@ -8,16 +8,16 @@
   "nchildren": 6,
   "summary": [
     {
-      "names": "setosa",
-      "x": 50
+      "class": "setosa",
+      "n": 50
     },
     {
-      "names": "versicolor",
-      "x": 50
+      "class": "versicolor",
+      "n": 50
     },
     {
-      "names": "virginica",
-      "x": 50
+      "class": "virginica",
+      "n": 50
     }
   ],
   "children": [
@@ -31,16 +31,8 @@
       "nchildren": 0,
       "summary": [
         {
-          "names": "setosa",
-          "x": 50
-        },
-        {
-          "names": "versicolor",
-          "x": 0
-        },
-        {
-          "names": "virginica",
-          "x": 0
+          "class": "setosa",
+          "n": 50
         }
       ]
     },
@@ -54,16 +46,12 @@
       "nchildren": 4,
       "summary": [
         {
-          "names": "setosa",
-          "x": 0
+          "class": "versicolor",
+          "n": 50
         },
         {
-          "names": "versicolor",
-          "x": 50
-        },
-        {
-          "names": "virginica",
-          "x": 50
+          "class": "virginica",
+          "n": 50
         }
       ],
       "children": [
@@ -77,16 +65,12 @@
           "nchildren": 2,
           "summary": [
             {
-              "names": "setosa",
-              "x": 0
+              "class": "versicolor",
+              "n": 49
             },
             {
-              "names": "versicolor",
-              "x": 49
-            },
-            {
-              "names": "virginica",
-              "x": 5
+              "class": "virginica",
+              "n": 5
             }
           ],
           "children": [
@@ -100,16 +84,12 @@
               "nchildren": 0,
               "summary": [
                 {
-                  "names": "setosa",
-                  "x": 0
+                  "class": "versicolor",
+                  "n": 45
                 },
                 {
-                  "names": "versicolor",
-                  "x": 45
-                },
-                {
-                  "names": "virginica",
-                  "x": 1
+                  "class": "virginica",
+                  "n": 1
                 }
               ]
             },
@@ -123,16 +103,12 @@
               "nchildren": 0,
               "summary": [
                 {
-                  "names": "setosa",
-                  "x": 0
+                  "class": "versicolor",
+                  "n": 4
                 },
                 {
-                  "names": "versicolor",
-                  "x": 4
-                },
-                {
-                  "names": "virginica",
-                  "x": 4
+                  "class": "virginica",
+                  "n": 4
                 }
               ]
             }
@@ -148,16 +124,12 @@
           "nchildren": 0,
           "summary": [
             {
-              "names": "setosa",
-              "x": 0
+              "class": "versicolor",
+              "n": 1
             },
             {
-              "names": "versicolor",
-              "x": 1
-            },
-            {
-              "names": "virginica",
-              "x": 45
+              "class": "virginica",
+              "n": 45
             }
           ]
         }

@@ -2,8 +2,10 @@ function d3cision() {
   
   // defaults (have function)
   var orientation = "top-to-bottom";
+  var shapelink = 0.75;
+  var separation = 0.00;
   
-  var margin = { top: 50, right: 50, bottom: 50, left: 50};
+  var margin = { top: 25, right: 25, bottom: 25, left: 25 };
   
   function chart(selection) {
     
@@ -32,21 +34,15 @@ function d3cision() {
       // maps the node data to the tree layout
       nodes = treemap(nodes);
       
-      var p = 0.8;
-      
-      
       // adds the links between the nodes
       var link = g.selectAll(".link")
           .data(nodes.descendants().slice(1))
         .enter().append("path")
           .attr("class", "link")
           .attr("d", function(d) {
-             curve =  "M" + d.x + "," + d.y
-               + " " + d.x  + "," + (d.y + (d.parent.y - d.y)*p  )
-               /* + "C" + d.x + "," + (d.y + d.parent.y) / 2 */
-               /*+ " " + d.parent.x + "," +  (d.y + d.parent.y) / 2 */
+             curve =  "M" + d.x + "," + (d.y - (d.y * separation))
+               + " " + d.x  + "," + (d.y + (d.parent.y - d.y) * shapelink)
                + " " + d.parent.x + "," + d.parent.y;
-             console.log(curve);
              return curve;
              });
       
@@ -61,8 +57,7 @@ function d3cision() {
             return "translate(" + d.x + "," + d.y + ")"; });
       
       // adds the circle to the node
-      node.append("circle")
-        .attr("r", 10);
+      // node.append("circle").attr("r", 10);
       
       // adds the text to the node
       node.append("text")
@@ -75,9 +70,15 @@ function d3cision() {
     
   }
   
-  chart.orientation = function(_) {
-    if (!arguments.length) return orientation;
-    orientation = _;
+  chart.separation = function(_) {
+    if (!arguments.length) return separation;
+    separation = _;
+    return chart;    
+  };
+  
+  chart.shapelink = function(_) {
+    if (!arguments.length) return shapelink;
+    shapelink = _;
     return chart;    
   };
   
