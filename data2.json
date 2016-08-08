@@ -20,6 +20,7 @@
       "n": 50
     }
   ],
+  "childrensid": [2, 3],
   "children": [
     {
       "name": 2,
@@ -34,7 +35,8 @@
           "class": "setosa",
           "n": 50
         }
-      ]
+      ],
+      "textanchor": "end"
     },
     {
       "name": 3,
@@ -54,6 +56,7 @@
           "n": 50
         }
       ],
+      "childrensid": [4, 7],
       "children": [
         {
           "name": 4,
@@ -73,6 +76,7 @@
               "n": 5
             }
           ],
+          "childrensid": [5, 6],
           "children": [
             {
               "name": 5,
@@ -91,7 +95,8 @@
                   "class": "virginica",
                   "n": 1
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 6,
@@ -110,9 +115,11 @@
                   "class": "virginica",
                   "n": 4
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 7,
@@ -131,9 +138,11 @@
               "class": "virginica",
               "n": 45
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "left"
     }
   ]
 }

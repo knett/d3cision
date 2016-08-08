@@ -43,6 +43,15 @@ library(dplyr)
 # }
 
 
+clnrule <- function(x) {
+  
+  x %>% 
+    str_replace("%in%", "in") %>% 
+    str_replace("c\\(", "(") %>% 
+    str_replace_all("\"", "")
+  
+}
+
 summ <- function(x) {
   
   if(class(x) %in% c("numeric", "integer")) {
@@ -64,7 +73,7 @@ tree_list <- function(tree, node = 1){
   size <- sum(table(tree$fitted[1])[as.character(children)], na.rm = TRUE)
   depth <-  depth(tree[[node]])
   summary <- summ(tree[[node]]$fitted[["(response)"]])
-  rule <- last(unlist(str_split(completerule, "\\s+&\\s+")))
+  rule <- clnrule(last(unlist(str_split(completerule, "\\s+&\\s+"))))
 
   isterminal <- length(children) == 1
   
@@ -90,7 +99,13 @@ tree_list <- function(tree, node = 1){
     
     childrenf <- setdiff(children2, nochildren)
     
+    str$childrensid <- childrenf
+    
     str$children <- map(childrenf, tree_list, tree = tree)
+    
+    # more elegant plz!
+    str$children[[1]]$textanchor <- "end"
+    str$children[[2]]$textanchor <- "left"
     
   }
   
@@ -134,18 +149,21 @@ tree %>%
 #   writeLines(con = "data3.json")
 
 # EXAMPLE 4 ---------------------------------------------------------------
+# devtools::install_github("jbkunst/riskr")
 data(credit, package = "riskr")
+set.seed(1234)
+
 credit2 <- credit %>%
   tbl_df() %>% 
   filter(complete.cases(credit)) %>%
   select(-id_client) %>% 
-  sample_n(3000) %>% 
+  sample_n(5000) %>% 
   mutate(bad = ifelse(bad == 0, "bad", "good"),
          bad = factor(bad)) %>% 
   map_if(is.character, as.factor) %>% 
   as_data_frame()
 
-tree <- ctree(bad ~ ., data = credit2, control = ctree_control(mincriterion = 0.60))
+tree <- ctree(bad ~ ., data = credit2, control = ctree_control(mincriterion = 0.80))
 plot(tree)
 
 tree %>%

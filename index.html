@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <style>
 #container {
-  background-color: #EEE;
-  width: 1000px;
-  height: 500px;
+  background-color: #f9f9f9;
+  width: 1200px;
+  height: 600px;
 }
 
 .node circle {
@@ -13,9 +14,8 @@
   stroke-width: 3px;
 }
 
-.node text { font: 10px sans-serif; }
-
-.node--internal text {
+.d3cision-node-text {
+  font-family: 'Roboto', sans-serif;
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
@@ -23,6 +23,21 @@
   fill: none;
   stroke: #ccc;
   stroke-width: 2px;
+}
+
+.tooltip {
+  background: #eee;
+  box-shadow: 0 0 5px #999999;
+  color: #333;
+  display: none;
+  font-size: 12px;
+  left: 130px;
+  padding: 10px;
+  position: absolute;
+  text-align: center;
+  top: 95px;
+  width: 80px;
+  z-index: 10;
 }
 </style>
 
@@ -38,8 +53,8 @@
   d3.json("data4.json", function(data) {
 
     var tree = d3cision()
-      .shapelink(0.75)
-      .separation(0.00)
+      .shapelink(0.70)
+      .textnodesize(10)
     
     d3.select("#container")
       .datum(data)

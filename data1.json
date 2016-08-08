@@ -16,6 +16,7 @@
       "maximum": 335
     }
   ],
+  "childrensid": [2, 9],
   "children": [
     {
       "name": 2,
@@ -35,6 +36,7 @@
           "maximum": 175
         }
       ],
+      "childrensid": [3, 6],
       "children": [
         {
           "name": 3,
@@ -54,6 +56,7 @@
               "maximum": 113
             }
           ],
+          "childrensid": [4, 5],
           "children": [
             {
               "name": 4,
@@ -72,7 +75,8 @@
                   "q3": 66,
                   "maximum": 66
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 5,
@@ -91,9 +95,11 @@
                   "q3": 96.5,
                   "maximum": 113
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 6,
@@ -113,6 +119,7 @@
               "maximum": 175
             }
           ],
+          "childrensid": [7, 8],
           "children": [
             {
               "name": 7,
@@ -131,7 +138,8 @@
                   "q3": 116.5,
                   "maximum": 123
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 8,
@@ -150,11 +158,14 @@
                   "q3": 175,
                   "maximum": 175
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "end"
     },
     {
       "name": 9,
@@ -174,6 +185,7 @@
           "maximum": 335
         }
       ],
+      "childrensid": [10, 13],
       "children": [
         {
           "name": 10,
@@ -193,6 +205,7 @@
               "maximum": 215
             }
           ],
+          "childrensid": [11, 12],
           "children": [
             {
               "name": 11,
@@ -211,7 +224,8 @@
                   "q3": 180,
                   "maximum": 180
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 12,
@@ -230,9 +244,11 @@
                   "q3": 212.5,
                   "maximum": 215
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 13,
@@ -252,6 +268,7 @@
               "maximum": 335
             }
           ],
+          "childrensid": [14, 15],
           "children": [
             {
               "name": 14,
@@ -270,7 +287,8 @@
                   "q3": 249.8,
                   "maximum": 264
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 15,
@@ -289,11 +307,14 @@
                   "q3": 335,
                   "maximum": 335
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "left"
     }
   ]
 }

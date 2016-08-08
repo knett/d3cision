@@ -1,579 +1,445 @@
 {
   "name": 1,
-  "size": 3000,
-  "depth": 6,
+  "size": 5000,
+  "depth": 7,
   "rule": "",
   "completerule": "",
   "terminal": false,
-  "nchildren": 28,
+  "nchildren": 20,
   "summary": [
     {
       "class": "bad",
-      "n": 2399
+      "n": 4051
     },
     {
       "class": "good",
-      "n": 601
+      "n": 949
     }
   ],
+  "childrensid": [2, 7],
   "children": [
     {
       "name": 2,
-      "size": 1397,
-      "depth": 3,
+      "size": 2358,
+      "depth": 2,
       "rule": "age <= 31",
       "completerule": "age <= 31",
       "terminal": false,
-      "nchildren": 8,
+      "nchildren": 4,
       "summary": [
         {
           "class": "bad",
-          "n": 1014
+          "n": 1747
         },
         {
           "class": "good",
-          "n": 383
+          "n": 611
         }
       ],
+      "childrensid": [3, 4],
       "children": [
         {
           "name": 3,
-          "size": 123,
+          "size": 511,
           "depth": 0,
-          "rule": "area_code_res_phone <= 23",
-          "completerule": "age <= 31 & area_code_res_phone <= 23",
+          "rule": "flag_res_phone in (N)",
+          "completerule": "age <= 31 & flag_res_phone %in% c(\"N\")",
           "terminal": true,
           "nchildren": 0,
           "summary": [
             {
               "class": "bad",
-              "n": 107
+              "n": 329
             },
             {
               "class": "good",
-              "n": 16
+              "n": 182
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 4,
-          "size": 1274,
-          "depth": 2,
-          "rule": "area_code_res_phone > 23",
-          "completerule": "age <= 31 & area_code_res_phone > 23",
+          "size": 1847,
+          "depth": 1,
+          "rule": "flag_res_phone in (Y)",
+          "completerule": "age <= 31 & flag_res_phone %in% c(\"Y\")",
           "terminal": false,
-          "nchildren": 6,
+          "nchildren": 2,
           "summary": [
             {
               "class": "bad",
-              "n": 907
+              "n": 1418
             },
             {
               "class": "good",
-              "n": 367
+              "n": 429
             }
           ],
+          "childrensid": [5, 6],
           "children": [
             {
               "name": 5,
-              "size": 266,
-              "depth": 1,
-              "rule": "flag_res_phone %in% c(\"N\")",
-              "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"N\")",
-              "terminal": false,
-              "nchildren": 2,
-              "summary": [
-                {
-                  "class": "bad",
-                  "n": 171
-                },
-                {
-                  "class": "good",
-                  "n": 95
-                }
-              ],
-              "children": [
-                {
-                  "name": 6,
-                  "size": 208,
-                  "depth": 0,
-                  "rule": "age <= 27",
-                  "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"N\") & age <= 27",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 126
-                    },
-                    {
-                      "class": "good",
-                      "n": 82
-                    }
-                  ]
-                },
-                {
-                  "name": 7,
-                  "size": 58,
-                  "depth": 0,
-                  "rule": "age > 27",
-                  "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"N\") & age > 27",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 45
-                    },
-                    {
-                      "class": "good",
-                      "n": 13
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": 8,
-              "size": 1008,
-              "depth": 1,
-              "rule": "flag_res_phone %in% c(\"Y\")",
-              "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"Y\")",
-              "terminal": false,
-              "nchildren": 2,
-              "summary": [
-                {
-                  "class": "bad",
-                  "n": 736
-                },
-                {
-                  "class": "good",
-                  "n": 272
-                }
-              ],
-              "children": [
-                {
-                  "name": 9,
-                  "size": 763,
-                  "depth": 0,
-                  "rule": "months_in_the_job <= 24",
-                  "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"Y\") & months_in_the_job <= 24",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 539
-                    },
-                    {
-                      "class": "good",
-                      "n": 224
-                    }
-                  ]
-                },
-                {
-                  "name": 10,
-                  "size": 245,
-                  "depth": 0,
-                  "rule": "months_in_the_job > 24",
-                  "completerule": "age <= 31 & area_code_res_phone > 23 & flag_res_phone %in% c(\"Y\") & months_in_the_job > 24",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 197
-                    },
-                    {
-                      "class": "good",
-                      "n": 48
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": 11,
-      "size": 1603,
-      "depth": 5,
-      "rule": "age > 31",
-      "completerule": "age > 31",
-      "terminal": false,
-      "nchildren": 18,
-      "summary": [
-        {
-          "class": "bad",
-          "n": 1385
-        },
-        {
-          "class": "good",
-          "n": 218
-        }
-      ],
-      "children": [
-        {
-          "name": 12,
-          "size": 1247,
-          "depth": 4,
-          "rule": "area_code_res_phone <= 49",
-          "completerule": "age > 31 & area_code_res_phone <= 49",
-          "terminal": false,
-          "nchildren": 10,
-          "summary": [
-            {
-              "class": "bad",
-              "n": 1100
-            },
-            {
-              "class": "good",
-              "n": 147
-            }
-          ],
-          "children": [
-            {
-              "name": 13,
-              "size": 820,
-              "depth": 3,
-              "rule": "age <= 47",
-              "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47",
-              "terminal": false,
-              "nchildren": 6,
-              "summary": [
-                {
-                  "class": "bad",
-                  "n": 705
-                },
-                {
-                  "class": "good",
-                  "n": 115
-                }
-              ],
-              "children": [
-                {
-                  "name": 14,
-                  "size": 786,
-                  "depth": 2,
-                  "rule": "personal_net_income <= 2200",
-                  "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income <= 2200",
-                  "terminal": false,
-                  "nchildren": 4,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 682
-                    },
-                    {
-                      "class": "good",
-                      "n": 104
-                    }
-                  ],
-                  "children": [
-                    {
-                      "name": 15,
-                      "size": 645,
-                      "depth": 0,
-                      "rule": "months_in_residence <= 276",
-                      "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income <= 2200 & months_in_residence <= 276",
-                      "terminal": true,
-                      "nchildren": 0,
-                      "summary": [
-                        {
-                          "class": "bad",
-                          "n": 569
-                        },
-                        {
-                          "class": "good",
-                          "n": 76
-                        }
-                      ]
-                    },
-                    {
-                      "name": 16,
-                      "size": 141,
-                      "depth": 1,
-                      "rule": "months_in_residence > 276",
-                      "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income <= 2200 & months_in_residence > 276",
-                      "terminal": false,
-                      "nchildren": 2,
-                      "summary": [
-                        {
-                          "class": "bad",
-                          "n": 113
-                        },
-                        {
-                          "class": "good",
-                          "n": 28
-                        }
-                      ],
-                      "children": [
-                        {
-                          "name": 17,
-                          "size": 109,
-                          "depth": 0,
-                          "rule": "marital_status %in% c(\"C\", \"S\")",
-                          "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income <= 2200 & months_in_residence > 276 & marital_status %in% c(\"C\", \"S\")",
-                          "terminal": true,
-                          "nchildren": 0,
-                          "summary": [
-                            {
-                              "class": "bad",
-                              "n": 93
-                            },
-                            {
-                              "class": "good",
-                              "n": 16
-                            }
-                          ]
-                        },
-                        {
-                          "name": 18,
-                          "size": 32,
-                          "depth": 0,
-                          "rule": "marital_status %in% c(\"D\", \"O\", \"V\")",
-                          "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income <= 2200 & months_in_residence > 276 & marital_status %in% c(\"D\", \"O\", \"V\")",
-                          "terminal": true,
-                          "nchildren": 0,
-                          "summary": [
-                            {
-                              "class": "bad",
-                              "n": 20
-                            },
-                            {
-                              "class": "good",
-                              "n": 12
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": 19,
-                  "size": 34,
-                  "depth": 0,
-                  "rule": "personal_net_income > 2200",
-                  "completerule": "age > 31 & area_code_res_phone <= 49 & age <= 47 & personal_net_income > 2200",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 23
-                    },
-                    {
-                      "class": "good",
-                      "n": 11
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": 20,
-              "size": 427,
-              "depth": 1,
-              "rule": "age > 47",
-              "completerule": "age > 31 & area_code_res_phone <= 49 & age > 47",
-              "terminal": false,
-              "nchildren": 2,
-              "summary": [
-                {
-                  "class": "bad",
-                  "n": 395
-                },
-                {
-                  "class": "good",
-                  "n": 32
-                }
-              ],
-              "children": [
-                {
-                  "name": 21,
-                  "size": 344,
-                  "depth": 0,
-                  "rule": "sex %in% c(\"F\")",
-                  "completerule": "age > 31 & area_code_res_phone <= 49 & age > 47 & sex %in% c(\"F\")",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 323
-                    },
-                    {
-                      "class": "good",
-                      "n": 21
-                    }
-                  ]
-                },
-                {
-                  "name": 22,
-                  "size": 83,
-                  "depth": 0,
-                  "rule": "sex %in% c(\"M\")",
-                  "completerule": "age > 31 & area_code_res_phone <= 49 & age > 47 & sex %in% c(\"M\")",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 72
-                    },
-                    {
-                      "class": "good",
-                      "n": 11
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": 23,
-          "size": 356,
-          "depth": 3,
-          "rule": "area_code_res_phone > 49",
-          "completerule": "age > 31 & area_code_res_phone > 49",
-          "terminal": false,
-          "nchildren": 6,
-          "summary": [
-            {
-              "class": "bad",
-              "n": 285
-            },
-            {
-              "class": "good",
-              "n": 71
-            }
-          ],
-          "children": [
-            {
-              "name": 24,
-              "size": 252,
-              "depth": 2,
-              "rule": "months_in_the_job <= 84",
-              "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job <= 84",
-              "terminal": false,
-              "nchildren": 4,
-              "summary": [
-                {
-                  "class": "bad",
-                  "n": 193
-                },
-                {
-                  "class": "good",
-                  "n": 59
-                }
-              ],
-              "children": [
-                {
-                  "name": 25,
-                  "size": 229,
-                  "depth": 0,
-                  "rule": "personal_net_income <= 956",
-                  "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job <= 84 & personal_net_income <= 956",
-                  "terminal": true,
-                  "nchildren": 0,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 182
-                    },
-                    {
-                      "class": "good",
-                      "n": 47
-                    }
-                  ]
-                },
-                {
-                  "name": 26,
-                  "size": 23,
-                  "depth": 1,
-                  "rule": "personal_net_income > 956",
-                  "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job <= 84 & personal_net_income > 956",
-                  "terminal": false,
-                  "nchildren": 2,
-                  "summary": [
-                    {
-                      "class": "bad",
-                      "n": 11
-                    },
-                    {
-                      "class": "good",
-                      "n": 12
-                    }
-                  ],
-                  "children": [
-                    {
-                      "name": 27,
-                      "size": 11,
-                      "depth": 0,
-                      "rule": "sex %in% c(\"F\")",
-                      "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job <= 84 & personal_net_income > 956 & sex %in% c(\"F\")",
-                      "terminal": true,
-                      "nchildren": 0,
-                      "summary": [
-                        {
-                          "class": "bad",
-                          "n": 9
-                        },
-                        {
-                          "class": "good",
-                          "n": 2
-                        }
-                      ]
-                    },
-                    {
-                      "name": 28,
-                      "size": 12,
-                      "depth": 0,
-                      "rule": "sex %in% c(\"M\")",
-                      "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job <= 84 & personal_net_income > 956 & sex %in% c(\"M\")",
-                      "terminal": true,
-                      "nchildren": 0,
-                      "summary": [
-                        {
-                          "class": "bad",
-                          "n": 2
-                        },
-                        {
-                          "class": "good",
-                          "n": 10
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": 29,
-              "size": 104,
+              "size": 178,
               "depth": 0,
-              "rule": "months_in_the_job > 84",
-              "completerule": "age > 31 & area_code_res_phone > 49 & months_in_the_job > 84",
+              "rule": "area_code_res_phone <= 27",
+              "completerule": "age <= 31 & flag_res_phone %in% c(\"Y\") & area_code_res_phone <= 27",
               "terminal": true,
               "nchildren": 0,
               "summary": [
                 {
                   "class": "bad",
-                  "n": 92
+                  "n": 151
                 },
                 {
                   "class": "good",
-                  "n": 12
+                  "n": 27
                 }
-              ]
+              ],
+              "textanchor": "end"
+            },
+            {
+              "name": 6,
+              "size": 1669,
+              "depth": 0,
+              "rule": "area_code_res_phone > 27",
+              "completerule": "age <= 31 & flag_res_phone %in% c(\"Y\") & area_code_res_phone > 27",
+              "terminal": true,
+              "nchildren": 0,
+              "summary": [
+                {
+                  "class": "bad",
+                  "n": 1267
+                },
+                {
+                  "class": "good",
+                  "n": 402
+                }
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "end"
+    },
+    {
+      "name": 7,
+      "size": 2642,
+      "depth": 6,
+      "rule": "age > 31",
+      "completerule": "age > 31",
+      "terminal": false,
+      "nchildren": 14,
+      "summary": [
+        {
+          "class": "bad",
+          "n": 2304
+        },
+        {
+          "class": "good",
+          "n": 338
+        }
+      ],
+      "childrensid": [8, 9],
+      "children": [
+        {
+          "name": 8,
+          "size": 418,
+          "depth": 0,
+          "rule": "flag_res_phone in (N)",
+          "completerule": "age > 31 & flag_res_phone %in% c(\"N\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "bad",
+              "n": 329
+            },
+            {
+              "class": "good",
+              "n": 89
+            }
+          ],
+          "textanchor": "end"
+        },
+        {
+          "name": 9,
+          "size": 2224,
+          "depth": 5,
+          "rule": "flag_res_phone in (Y)",
+          "completerule": "age > 31 & flag_res_phone %in% c(\"Y\")",
+          "terminal": false,
+          "nchildren": 12,
+          "summary": [
+            {
+              "class": "bad",
+              "n": 1975
+            },
+            {
+              "class": "good",
+              "n": 249
+            }
+          ],
+          "childrensid": [10, 13],
+          "children": [
+            {
+              "name": 10,
+              "size": 1404,
+              "depth": 1,
+              "rule": "age <= 46",
+              "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age <= 46",
+              "terminal": false,
+              "nchildren": 2,
+              "summary": [
+                {
+                  "class": "bad",
+                  "n": 1210
+                },
+                {
+                  "class": "good",
+                  "n": 194
+                }
+              ],
+              "childrensid": [11, 12],
+              "children": [
+                {
+                  "name": 11,
+                  "size": 651,
+                  "depth": 0,
+                  "rule": "months_in_the_job <= 24",
+                  "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age <= 46 & months_in_the_job <= 24",
+                  "terminal": true,
+                  "nchildren": 0,
+                  "summary": [
+                    {
+                      "class": "bad",
+                      "n": 538
+                    },
+                    {
+                      "class": "good",
+                      "n": 113
+                    }
+                  ],
+                  "textanchor": "end"
+                },
+                {
+                  "name": 12,
+                  "size": 753,
+                  "depth": 0,
+                  "rule": "months_in_the_job > 24",
+                  "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age <= 46 & months_in_the_job > 24",
+                  "terminal": true,
+                  "nchildren": 0,
+                  "summary": [
+                    {
+                      "class": "bad",
+                      "n": 672
+                    },
+                    {
+                      "class": "good",
+                      "n": 81
+                    }
+                  ],
+                  "textanchor": "left"
+                }
+              ],
+              "textanchor": "end"
+            },
+            {
+              "name": 13,
+              "size": 820,
+              "depth": 4,
+              "rule": "age > 46",
+              "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46",
+              "terminal": false,
+              "nchildren": 8,
+              "summary": [
+                {
+                  "class": "bad",
+                  "n": 765
+                },
+                {
+                  "class": "good",
+                  "n": 55
+                }
+              ],
+              "childrensid": [14, 21],
+              "children": [
+                {
+                  "name": 14,
+                  "size": 627,
+                  "depth": 3,
+                  "rule": "sex in (F)",
+                  "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\")",
+                  "terminal": false,
+                  "nchildren": 6,
+                  "summary": [
+                    {
+                      "class": "bad",
+                      "n": 594
+                    },
+                    {
+                      "class": "good",
+                      "n": 33
+                    }
+                  ],
+                  "childrensid": [15, 20],
+                  "children": [
+                    {
+                      "name": 15,
+                      "size": 605,
+                      "depth": 2,
+                      "rule": "residence_type in (A, C, P)",
+                      "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"A\", \"C\", \"P\")",
+                      "terminal": false,
+                      "nchildren": 4,
+                      "summary": [
+                        {
+                          "class": "bad",
+                          "n": 572
+                        },
+                        {
+                          "class": "good",
+                          "n": 33
+                        }
+                      ],
+                      "childrensid": [16, 19],
+                      "children": [
+                        {
+                          "name": 16,
+                          "size": 69,
+                          "depth": 1,
+                          "rule": "residence_type in (A, C, NA)",
+                          "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"A\", \"C\", \"P\") & residence_type %in% c(\"A\", \"C\", \"NA\")",
+                          "terminal": false,
+                          "nchildren": 2,
+                          "summary": [
+                            {
+                              "class": "bad",
+                              "n": 64
+                            },
+                            {
+                              "class": "good",
+                              "n": 5
+                            }
+                          ],
+                          "childrensid": [17, 18],
+                          "children": [
+                            {
+                              "name": 17,
+                              "size": 56,
+                              "depth": 0,
+                              "rule": "months_in_residence <= 192",
+                              "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"A\", \"C\", \"P\") & residence_type %in% c(\"A\", \"C\", \"NA\") & months_in_residence <= 192",
+                              "terminal": true,
+                              "nchildren": 0,
+                              "summary": [
+                                {
+                                  "class": "bad",
+                                  "n": 55
+                                },
+                                {
+                                  "class": "good",
+                                  "n": 1
+                                }
+                              ],
+                              "textanchor": "end"
+                            },
+                            {
+                              "name": 18,
+                              "size": 13,
+                              "depth": 0,
+                              "rule": "months_in_residence > 192",
+                              "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"A\", \"C\", \"P\") & residence_type %in% c(\"A\", \"C\", \"NA\") & months_in_residence > 192",
+                              "terminal": true,
+                              "nchildren": 0,
+                              "summary": [
+                                {
+                                  "class": "bad",
+                                  "n": 9
+                                },
+                                {
+                                  "class": "good",
+                                  "n": 4
+                                }
+                              ],
+                              "textanchor": "left"
+                            }
+                          ],
+                          "textanchor": "end"
+                        },
+                        {
+                          "name": 19,
+                          "size": 536,
+                          "depth": 0,
+                          "rule": "residence_type in (NA, P)",
+                          "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"A\", \"C\", \"P\") & residence_type %in% c(\"NA\", \"P\")",
+                          "terminal": true,
+                          "nchildren": 0,
+                          "summary": [
+                            {
+                              "class": "bad",
+                              "n": 508
+                            },
+                            {
+                              "class": "good",
+                              "n": 28
+                            }
+                          ],
+                          "textanchor": "left"
+                        }
+                      ],
+                      "textanchor": "end"
+                    },
+                    {
+                      "name": 20,
+                      "size": 22,
+                      "depth": 0,
+                      "rule": "residence_type in (O)",
+                      "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"F\") & residence_type %in% c(\"O\")",
+                      "terminal": true,
+                      "nchildren": 0,
+                      "summary": [
+                        {
+                          "class": "bad",
+                          "n": 22
+                        }
+                      ],
+                      "textanchor": "left"
+                    }
+                  ],
+                  "textanchor": "end"
+                },
+                {
+                  "name": 21,
+                  "size": 193,
+                  "depth": 0,
+                  "rule": "sex in (M)",
+                  "completerule": "age > 31 & flag_res_phone %in% c(\"Y\") & age > 46 & sex %in% c(\"M\")",
+                  "terminal": true,
+                  "nchildren": 0,
+                  "summary": [
+                    {
+                      "class": "bad",
+                      "n": 171
+                    },
+                    {
+                      "class": "good",
+                      "n": 22
+                    }
+                  ],
+                  "textanchor": "left"
+                }
+              ],
+              "textanchor": "left"
+            }
+          ],
+          "textanchor": "left"
+        }
+      ],
+      "textanchor": "left"
     }
   ]
 }

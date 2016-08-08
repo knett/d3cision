@@ -16,6 +16,7 @@
       "maximum": 168
     }
   ],
+  "childrensid": [2, 7],
   "children": [
     {
       "name": 2,
@@ -35,6 +36,7 @@
           "maximum": 168
         }
       ],
+      "childrensid": [3, 4],
       "children": [
         {
           "name": 3,
@@ -53,7 +55,8 @@
               "q3": 56.25,
               "maximum": 168
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 4,
@@ -73,6 +76,7 @@
               "maximum": 65
             }
           ],
+          "childrensid": [5, 6],
           "children": [
             {
               "name": 5,
@@ -91,7 +95,8 @@
                   "q3": 23,
                   "maximum": 41
                 }
-              ]
+              ],
+              "textanchor": "end"
             },
             {
               "name": 6,
@@ -110,11 +115,14 @@
                   "q3": 44,
                   "maximum": 65
                 }
-              ]
+              ],
+              "textanchor": "left"
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "end"
     },
     {
       "name": 7,
@@ -134,6 +142,7 @@
           "maximum": 135
         }
       ],
+      "childrensid": [8, 9],
       "children": [
         {
           "name": 8,
@@ -152,7 +161,8 @@
               "q3": 94.75,
               "maximum": 135
             }
-          ]
+          ],
+          "textanchor": "end"
         },
         {
           "name": 9,
@@ -171,9 +181,11 @@
               "q3": 57.5,
               "maximum": 71
             }
-          ]
+          ],
+          "textanchor": "left"
         }
-      ]
+      ],
+      "textanchor": "left"
     }
   ]
 }
