@@ -19,26 +19,6 @@
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
 
-.link {
-  fill: none;
-  stroke: #ccc;
-  stroke-width: 2px;
-}
-
-.tooltip {
-  background: #eee;
-  box-shadow: 0 0 5px #999999;
-  color: #333;
-  display: none;
-  font-size: 12px;
-  left: 130px;
-  padding: 10px;
-  position: absolute;
-  text-align: center;
-  top: 95px;
-  width: 80px;
-  z-index: 10;
-}
 </style>
 
 <body>
@@ -53,7 +33,7 @@
   d3.json("data4.json", function(data) {
 
     var tree = d3cision()
-      .shapelink(0.70)
+      .shapelink(0.50)
       .textnodesize(10)
     
     d3.select("#container")
