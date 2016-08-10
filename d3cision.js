@@ -1,13 +1,16 @@
 function d3cision() {
   
   // defaults (don't forget: have functions)
-  var shapelink = 0.75;
   var textnodesize = "12px"; 
+  var debug = false;
 
   // internals
+  var lknfctr = 0.70;
   var sep = 10;
   var textposition = {x : 0, y : 0};
   var margin = { top: 25, right: 25, bottom: 25, left: 25 };
+  var rectpars = { width: 8 };
+  var colors = ["red", "blue"];
 
   function chart(selection) {
     
@@ -16,12 +19,13 @@ function d3cision() {
       var width = this.offsetWidth - margin.left - margin.right;
       var height = this.offsetHeight - margin.top - margin.bottom;
       var d3cisionid = makeid();
-      
+      var colorscale = "s";
 
-      console.log("data", data);
-      console.log("d3cisionid", d3cisionid);
-
-      window.data = data;
+      if(debug){
+        console.log("data", data);
+        console.log("d3cisionid", d3cisionid);
+        window.data = data;
+      }
 
       var svg = d3.select(this).append("svg")
           .attr("width", width + margin.left + margin.right)
@@ -49,41 +53,33 @@ function d3cision() {
         .append("path")
         .attr("d3cisionid", d3cisionid)
         .attr("class", "d3cision-link")
-        .attr("stroke", "#bbb")
+        .attr("stroke", "#eee")
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
         .attr("d", function(d) {
           
-          curve =  "M" + d.x + "," + (d.y - (d.y * 0))
-            + " " + d.x  + "," + (d.y + (d.parent.y - d.y) * shapelink)
-            + " " + d.parent.x + "," + d.parent.y;
-            
+          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y;
+          var curve = getlknfctr(d.x, d.y, d.parent.x, d.parent.y, yd);
+          
           return curve;
+          
         });
         
       var link2 = links
         .append("path")
-        .attr("stroke", "#ddd")
+        .attr("stroke", "#ccc")
         .attr("d3cisionid", d3cisionid)
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
         .attr("d", function(d) {
-        
-          x = d.x - sep * ((d.data.textanchor == "end") ? -1 : 1);
-          xp = d.parent.x;
-          y = d.y - sep;
-          yp = d.parent.y + sep;
-          yd = (d.y + (yp - y) * shapelink);
           
-          z = sep * (yd - yp) / Math.abs(xp - x);
-          
-          yd = yd - z;
-          
-          curve =  "M" + x + "," + y
-          + " " + x  + "," + yd
-          + " " + xp + "," + yp;
+          sig = ((d.data.side == "left") ? 1 : -1);
+          sep2 = sep * sig
+
+          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y;
+          var curve = getlknfctr(d.x + sep2, d.y, d.parent.x, d.parent.y + sep, yd + sep);
           
           return curve;
           
@@ -101,18 +97,25 @@ function d3cision() {
             return "translate(" + d.x + "," + d.y + ")";
           });
       
-      // adds the circle to the node
+      // adds the rects to the node
+      /*
       var rects = node.append("rect")
         .attr("d3cisionid", d3cisionid)
         .attr("fill", "#ccc")
         .attr("nodeid", function(d){ return d.data.name; })
-        .attr("x", -3)
+        .attr("x", function(d){
+          x = -rectpars.width/2 + sep * ((d.data.side == "left") ? 1 : -1);
+          x = (d.data.name == "1") ? -rectpars.width/2 : x;
+          // x = -3 - sep;
+          return x;
+        })
         .attr("y", -sep)
-        .attr("width", 6)
+        .attr("width", rectpars.width)
         .attr("height", 10);
+      */
       
       // adds the text to the node
-      node.append("text")
+      var texts = node.append("text")
         .attr("d3cisionid", d3cisionid)
         .attr("dy", ".35em")
         //.attr("y", function(d) { return d.children ? -20 : 20; })
@@ -121,12 +124,14 @@ function d3cision() {
         .attr("fill", "#999")
         .attr("y", -20)
         .attr("x", function(d){
-          return 5 * ((d.data.textanchor == "end") ? -1 : 1);
+          var textanchor = (d.data.side == "left") ? "end" : "left";
+          var x = 5 * ((textanchor == "end") ? -1 : 1);
+          return x;
         })
         //.style("text-anchor", "middle")
         .style("text-anchor", function(d){
-          // return d.children ? "middle" : d.data.textanchor;
-           return d.data.textanchor;
+          var textanchor = (d.data.side == "left") ? "end" : "left";
+          return textanchor;
         })
         .text(function(d) { return d.data.rule + " (" + d.data.name + ")"; });
         
@@ -143,27 +148,27 @@ function d3cision() {
       function mouseover(d) {
         console.log(d.data.name);
         /*d3.selectAll("[d3cisionid='ynppv']").selectAll("[nodeid='4']");*/
-      };
+      }
       
-      links.on('mouseover', mouseover)
-      rects.on('mouseover', mouseover);
+      //links.on('mouseover', mouseover);
+      //rects.on('mouseover', mouseover);
       
 
     });
     
   }
-  
-  chart.shapelink = function(_) {
-    if (!arguments.length) return shapelink;
-    shapelink = _;
-    return chart;    
-  };
-  
+
   chart.textnodesize = function(_) {
     if (!arguments.length) return textnodesize;
     textnodesize = _;
     return chart;    
   };
+  
+  chart.debug = function(_) {
+    if (!arguments.length) return debug;
+    debug = _;
+    return chart;    
+  };  
   
   return chart;
   
@@ -175,5 +180,15 @@ function d3cision() {
 // http://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 function makeid() {
   return Math.random().toString(36).substr(2, 5);
+}
+
+function getlknfctr(x, y, xp, yp, yd) {
+  
+   curve =  "M" + x + "," + y
+     + " " + x  + "," + yd
+     + " " + xp + "," + yp;
+     
+    return curve;
+  
 }
 

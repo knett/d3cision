@@ -104,8 +104,8 @@ tree_list <- function(tree, node = 1){
     str$children <- map(childrenf, tree_list, tree = tree)
     
     # more elegant plz!
-    str$children[[1]]$textanchor <- "end"
-    str$children[[2]]$textanchor <- "left"
+    str$children[[1]]$side <- "left"
+    str$children[[2]]$side <- "right"
     
   }
   

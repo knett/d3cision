@@ -36,7 +36,7 @@
           "n": 50
         }
       ],
-      "textanchor": "end"
+      "side": "left"
     },
     {
       "name": 3,
@@ -96,7 +96,7 @@
                   "n": 1
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 6,
@@ -116,10 +116,10 @@
                   "n": 4
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "end"
+          "side": "left"
         },
         {
           "name": 7,
@@ -139,10 +139,10 @@
               "n": 45
             }
           ],
-          "textanchor": "left"
+          "side": "right"
         }
       ],
-      "textanchor": "left"
+      "side": "right"
     }
   ]
 }

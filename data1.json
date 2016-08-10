@@ -76,7 +76,7 @@
                   "maximum": 66
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 5,
@@ -96,10 +96,10 @@
                   "maximum": 113
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "end"
+          "side": "left"
         },
         {
           "name": 6,
@@ -139,7 +139,7 @@
                   "maximum": 123
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 8,
@@ -159,13 +159,13 @@
                   "maximum": 175
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "left"
+          "side": "right"
         }
       ],
-      "textanchor": "end"
+      "side": "left"
     },
     {
       "name": 9,
@@ -225,7 +225,7 @@
                   "maximum": 180
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 12,
@@ -245,10 +245,10 @@
                   "maximum": 215
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "end"
+          "side": "left"
         },
         {
           "name": 13,
@@ -288,7 +288,7 @@
                   "maximum": 264
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 15,
@@ -308,13 +308,13 @@
                   "maximum": 335
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "left"
+          "side": "right"
         }
       ],
-      "textanchor": "left"
+      "side": "right"
     }
   ]
 }

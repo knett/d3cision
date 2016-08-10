@@ -56,7 +56,7 @@
               "n": 182
             }
           ],
-          "textanchor": "end"
+          "side": "left"
         },
         {
           "name": 4,
@@ -96,7 +96,7 @@
                   "n": 27
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 6,
@@ -116,13 +116,13 @@
                   "n": 402
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "left"
+          "side": "right"
         }
       ],
-      "textanchor": "end"
+      "side": "left"
     },
     {
       "name": 7,
@@ -162,7 +162,7 @@
               "n": 89
             }
           ],
-          "textanchor": "end"
+          "side": "left"
         },
         {
           "name": 9,
@@ -222,7 +222,7 @@
                       "n": 113
                     }
                   ],
-                  "textanchor": "end"
+                  "side": "left"
                 },
                 {
                   "name": 12,
@@ -242,10 +242,10 @@
                       "n": 81
                     }
                   ],
-                  "textanchor": "left"
+                  "side": "right"
                 }
               ],
-              "textanchor": "end"
+              "side": "left"
             },
             {
               "name": 13,
@@ -345,7 +345,7 @@
                                   "n": 1
                                 }
                               ],
-                              "textanchor": "end"
+                              "side": "left"
                             },
                             {
                               "name": 18,
@@ -365,10 +365,10 @@
                                   "n": 4
                                 }
                               ],
-                              "textanchor": "left"
+                              "side": "right"
                             }
                           ],
-                          "textanchor": "end"
+                          "side": "left"
                         },
                         {
                           "name": 19,
@@ -388,10 +388,10 @@
                               "n": 28
                             }
                           ],
-                          "textanchor": "left"
+                          "side": "right"
                         }
                       ],
-                      "textanchor": "end"
+                      "side": "left"
                     },
                     {
                       "name": 20,
@@ -407,10 +407,10 @@
                           "n": 22
                         }
                       ],
-                      "textanchor": "left"
+                      "side": "right"
                     }
                   ],
-                  "textanchor": "end"
+                  "side": "left"
                 },
                 {
                   "name": 21,
@@ -430,16 +430,16 @@
                       "n": 22
                     }
                   ],
-                  "textanchor": "left"
+                  "side": "right"
                 }
               ],
-              "textanchor": "left"
+              "side": "right"
             }
           ],
-          "textanchor": "left"
+          "side": "right"
         }
       ],
-      "textanchor": "left"
+      "side": "right"
     }
   ]
 }

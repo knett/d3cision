@@ -2,9 +2,9 @@
 <meta charset="utf-8">
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 <style>
-#container {
+.container {
   background-color: #f9f9f9;
-  width: 1200px;
+  width: 800px;
   height: 600px;
 }
 
@@ -23,27 +23,38 @@
 
 <body>
 
-<div id="container"></div>
+<div class="container" id="container"></div>
+<div class="container" id="container2"></div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://rawgit.com/jgoodall/d3-colorlegend/master/colorlegend.js"></script>
+
 <script src="d3cision.js"></script>
 <script>
   console.log("ready")
   
+  var colors = ["#000004FF", "#180F3EFF", "#451077FF", "#721F81FF", "#9F2F7FFF",
+                 "#CD4071FF", "#F1605DFF", "#FD9567FF", "#FEC98DFF", "#FCFDBFFF"];
+  
   d3.json("data4.json", function(data) {
-
     var tree = d3cision()
-      .shapelink(0.50)
       .textnodesize(10)
+      .debug(true)
     
     d3.select("#container")
       .datum(data)
       .call(tree);
+  });
+  
+  d3.json("data2.json", function(data) {
     
+    // defaults
+    d3.select("#container2")
+      .datum(data)
+      .call(d3cision());
   });
   
   console.log("finished")
   
-    
 </script>
 </body>
