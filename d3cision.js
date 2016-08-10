@@ -79,7 +79,7 @@ function d3cision() {
           sep2 = sep * sig
 
           var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y;
-          var curve = getlknfctr(d.x + sep2, d.y, d.parent.x, d.parent.y + sep, yd + sep);
+          var curve = getlknfctr(d.x, d.y, d.parent.x, d.parent.y + sep, yd + sep);
           
           return curve;
           
