@@ -1,12 +1,12 @@
 function d3cision() {
   
   // defaults (don't forget: have functions)
-  var textnodesize = "12px"; 
+  var textnodesize = "14px"; 
   var debug = false;
 
   // internals
-  var lknfctr = 0.70;
-  var sep = 10;
+  var lknfctr = 0.75;
+  var sep = 7.5;
   var textposition = {x : 0, y : 0};
   var margin = { top: 25, right: 25, bottom: 25, left: 25 };
   var rectpars = { width: 8 };
@@ -52,8 +52,8 @@ function d3cision() {
       var links1 = links
         .append("path")
         .attr("d3cisionid", d3cisionid)
-        .attr("class", "d3cision-link")
-        .attr("stroke", "#eee")
+        .attr("class", "d3cisionid-link-external")
+        .attr("stroke", "#bbb")
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
@@ -68,18 +68,22 @@ function d3cision() {
         
       var link2 = links
         .append("path")
-        .attr("stroke", "#ccc")
+        .attr("stroke", "#999")
         .attr("d3cisionid", d3cisionid)
+        .attr("class", "d3cisionid-link-internal")
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
         .attr("d", function(d) {
           
-          sig = ((d.data.side == "left") ? 1 : -1);
-          sep2 = sep * sig
-
-          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y;
-          var curve = getlknfctr(d.x, d.y, d.parent.x, d.parent.y + sep, yd + sep);
+          sep2 = sep * ((d.data.side == "left") ? 1 : -1);
+          
+          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y,
+            m = (d.parent.y - yd) / (d.parent.x - d.x),
+            bp = sep * Math.sqrt(m * m + 1) + d.parent.y,
+            ydp = m * (d.x + sep2) - (m * d.parent.x - bp);
+          
+          var curve = getlknfctr(d.x + sep2, d.y - sep, d.parent.x, bp, ydp);
           
           return curve;
           
