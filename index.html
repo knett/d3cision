@@ -26,29 +26,36 @@
 <script src="d3cision.js"></script>
 <script>
   console.log("ready")
-  
+
   var colors = ["#000004FF", "#180F3EFF", "#451077FF", "#721F81FF", "#9F2F7FFF",
                  "#CD4071FF", "#F1605DFF", "#FD9567FF", "#FEC98DFF", "#FCFDBFFF"];
-  
+
   d3.json("data4.json", function(data) {
+
     var tree = d3cision()
       .textnodesize(10)
       .debug(true)
-    
+
     d3.select("#container")
       .datum(data)
       .call(tree);
   });
-  
+
   d3.json("data2.json", function(data) {
-    
-    // defaults
+
+    var tree = d3cision()
+      .textnodesize(10)
+      .secondarycolor("#f0f0f0")
+      .textcolor("#212121")
+      .accentcolor("#b71c1c");
+
     d3.select("#container2")
       .datum(data)
-      .call(d3cision());
+      .call(tree);
+
   });
-  
+
   console.log("finished")
-  
+
 </script>
 </body>
