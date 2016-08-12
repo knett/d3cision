@@ -18,8 +18,37 @@ Yep.
 
 - textnodesize. To set the size of the texts.
 - shape. I don't know how to name this parameters and how to explain it in a simple way.
-sep. The separation in the inner and outside links. Number between 0 and inf.
-debug. To show what is going on in the script.
+- sep. The separation in the inner and outside links. Number between 0 and inf.
+- debug. To show what is going on in the script.
+
+## How is the data to needed?
+
+The usual recursive structure. Like the ultra know flare.json:
+
+```
+ "children": [
+    {
+      "name": 2,
+      "size": 18,
+      "depth": 2,
+      "rule": "cyl < 7",
+      "completerule": "cyl < 7",
+      "terminal": false,
+      "nchildren": 6,
+      "summary": [
+        {
+          "minimum": 52,
+          "q1": 72.25,
+          "median": 101,
+          "mean": 98.06,
+          "q3": 110,
+          "maximum": 175
+        }
+      ],
+      "childrensid": [3, 6],
+      "children": [ ...
+```     
+      
 
 ## References
 
