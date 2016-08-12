@@ -1,12 +1,17 @@
 function d3cision() {
   
   // defaults (don't forget: have functions)
-  var textnodesize = "14px"; 
+  var textnodesize = "14px";
   var debug = false;
+  var shape = 0.75;
+  var sep = 7.5;
 
   // internals
-  var lknfctr = 0.75;
-  var sep = 7.5;
+  var primarycolor = "#ccc";
+  var secondarycolor  = "#f0f0f0";
+  var accentcolor = "#303F9F";
+  var textcolor = "#212121";
+  
   var textposition = {x : 0, y : 0};
   var margin = { top: 25, right: 25, bottom: 25, left: 25 };
   var rectpars = { width: 8 };
@@ -53,14 +58,14 @@ function d3cision() {
         .append("path")
         .attr("d3cisionid", d3cisionid)
         .attr("class", "d3cisionid-link-external")
-        .attr("stroke", "#bbb")
+        .attr("stroke", secondarycolor)
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
         .attr("d", function(d) {
           
-          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y;
-          var curve = getlknfctr(d.x, d.y, d.parent.x, d.parent.y, yd);
+          var yd = (1 - shape) * d.y + shape * d.parent.y;
+          var curve = getshape(d.x, d.y, d.parent.x, d.parent.y, yd);
           
           return curve;
           
@@ -68,9 +73,9 @@ function d3cision() {
         
       var link2 = links
         .append("path")
-        .attr("stroke", "#999")
         .attr("d3cisionid", d3cisionid)
         .attr("class", "d3cisionid-link-internal")
+        .attr("stroke", primarycolor)
         .attr("fill", "none")
         .attr("stroke-width", "2px")
         .attr("nodeid", function(d){ return d.data.name; })
@@ -78,12 +83,12 @@ function d3cision() {
           
           sep2 = sep * ((d.data.side == "left") ? 1 : -1);
           
-          var yd = (1 - lknfctr) * d.y + lknfctr * d.parent.y,
+          var yd = (1 - shape) * d.y + shape * d.parent.y,
             m = (d.parent.y - yd) / (d.parent.x - d.x),
             bp = sep * Math.sqrt(m * m + 1) + d.parent.y,
             ydp = m * (d.x + sep2) - (m * d.parent.x - bp);
           
-          var curve = getlknfctr(d.x + sep2, d.y - sep, d.parent.x, bp, ydp);
+          var curve = getshape(d.x + sep2, d.y - sep, d.parent.x, bp, ydp);
           
           return curve;
           
@@ -121,11 +126,12 @@ function d3cision() {
       // adds the text to the node
       var texts = node.append("text")
         .attr("d3cisionid", d3cisionid)
+        .attr("class", "d3cision-node-text")
+        .attr("nodeid", function(d){ return d.data.name; })
+        .attr("font-size", textnodesize)
+        .attr("fill", textcolor)
         .attr("dy", ".35em")
         //.attr("y", function(d) { return d.children ? -20 : 20; })
-        .attr("class", "d3cision-node-text")
-        .attr("font-size", textnodesize)
-        .attr("fill", "#999")
         .attr("y", -20)
         .attr("x", function(d){
           var textanchor = (d.data.side == "left") ? "end" : "left";
@@ -168,6 +174,18 @@ function d3cision() {
     return chart;    
   };
   
+  chart.shape = function(_) {
+    if (!arguments.length) return shape;
+    shape = _;
+    return chart;    
+  };
+  
+  chart.sep = function(_) {
+    if (!arguments.length) return sep;
+    sep = _;
+    return chart;    
+  };  
+  
   chart.debug = function(_) {
     if (!arguments.length) return debug;
     debug = _;
@@ -178,15 +196,13 @@ function d3cision() {
   
 }
 
-
-
 // Auxiliar functions
 // http://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 function makeid() {
   return Math.random().toString(36).substr(2, 5);
 }
 
-function getlknfctr(x, y, xp, yp, yd) {
+function getshape(x, y, xp, yp, yd) {
   
    curve =  "M" + x + "," + y
      + " " + x  + "," + yd
