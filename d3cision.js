@@ -54,6 +54,27 @@ function d3cision() {
         .data(nodes.descendants().slice(1))
         .enter();
 
+      // the invisible rects
+      var boxs = links
+        .append("rect")
+        .attr("d3cisionid", d3cisionid)
+        .attr("class", "d3cisionid-rect-invisible")
+        .attr("fill", "#fafafa")
+        .attr("nodeid", function(d){ return d.data.name; })
+        .attr("x", function(d){
+          var x;
+          if(d.data.side == "left") {
+            x = d.parent.x - Math.abs(d.parent.x - d.x)
+          } else {
+            x = d.parent.x
+          }
+          return x;
+        })
+        .attr("y", function(d){ return d.parent.y; })
+        .attr("width", function(d){ return Math.abs(d.parent.x - d.x); })
+        .attr("height", function(d){ return d.y - d.parent.y; })
+
+
       // the external (the real ones)
       var links1 = links
         .append("path")
@@ -149,9 +170,13 @@ function d3cision() {
 
       function mouseover(d) {
 
-        d3.selectAll("path[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll(".d3cisionid-link-external[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
           .transition().duration(transitiontime)
           .attr("stroke", accentcolor);
+
+        d3.selectAll(".d3cisionid-link-internal[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+            .transition().duration(transitiontime)
+            .attr("stroke", accentcolor);
 
         d3.selectAll("text[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
             .transition().duration(transitiontime)
@@ -172,8 +197,9 @@ function d3cision() {
           .attr("fill", secondarycolor);
       }
 
-      d3.selectAll("[d3cisionid='" + d3cisionid + "']").on('mouseover', mouseover);
-      d3.selectAll("[d3cisionid='" + d3cisionid + "']").on('mouseout', mouseout);
+      boxs
+        .on('mouseover', mouseover)
+        .on('mouseout', mouseout);
       // link2.on('mouseout', mouseout);
       // rects.on('mouseover', mouseover);
 
