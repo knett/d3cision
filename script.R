@@ -170,3 +170,26 @@ tree %>%
   tree_list() %>%
   toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
   writeLines(con = "data4.json")
+
+
+# EXAMPLE 5 ---------------------------------------------------------------
+data("Titanic", package = "datasets")
+ttnc <- as.data.frame(Titanic)
+ttnc <- ttnc[rep(1:nrow(ttnc), ttnc$Freq), 1:4]
+names(ttnc)[2] <- "Gender"
+
+# j48 <- J48(Survived ~ ., data = ttnc)
+# plot(j48)
+# 
+# tree <- as.party(j48)
+# plot(tree)
+
+tree <- ctree(Survived ~ ., data = ttnc)
+plot(tree)
+
+tree %>%
+  tree_list() %>%
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
+  writeLines(con = "data5.json")
+
+

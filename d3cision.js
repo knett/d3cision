@@ -1,7 +1,7 @@
 function d3cision() {
 
   // defaults (don't forget: have functions)
-  var textnodesize = "14px";
+  var textnodesize = "12px";
   var debug = false;
   var shape = 0.75;
   var sep = 7.5;
@@ -59,7 +59,7 @@ function d3cision() {
         .append("rect")
         .attr("d3cisionid", d3cisionid)
         .attr("class", "d3cisionid-rect-invisible")
-        .attr("fill", "#fafafa")
+        .attr("fill", "transparent")
         .attr("nodeid", function(d){ return d.data.name; })
         .attr("x", function(d){
           var x;

@@ -17,8 +17,11 @@
 
 <body>
 
-<div class="container" id="container"></div>
+<div class="container" id="container1"></div>
 <div class="container" id="container2"></div>
+<div class="container" id="container3"></div>
+<div class="container" id="container4"></div>
+<div class="container" id="container5"></div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://rawgit.com/jgoodall/d3-colorlegend/master/colorlegend.js"></script>
@@ -33,27 +36,62 @@
   d3.json("data4.json", function(data) {
 
     var tree = d3cision()
-      .textnodesize(10)
       .debug(true)
 
-    d3.select("#container")
+    d3.select("#container1")
       .datum(data)
       .call(tree);
   });
 
-  d3.json("data2.json", function(data) {
+  d3.json("data5.json", function(data) {
 
     var tree = d3cision()
-      .textnodesize(10)
-      .secondarycolor("#f0f0f0")
-      .textcolor("#212121")
-      .accentcolor("#b71c1c");
+    .secondarycolor("#f0f0f0");
 
     d3.select("#container2")
       .datum(data)
       .call(tree);
 
   });
+
+  d3.json("data2.json", function(data) {
+
+    var tree = d3cision()
+      .secondarycolor("#f0f0f0")
+      .textcolor("#212121")
+      .accentcolor("#b71c1c");
+
+    d3.select("#container3")
+      .datum(data)
+      .call(tree);
+
+  });
+
+  d3.json("data1.json", function(data) {
+
+    var tree = d3cision()
+      .sep(5)
+      .shape(0);
+
+    d3.select("#container4")
+      .datum(data)
+      .call(tree);
+
+  });
+
+  d3.json("data3.json", function(data) {
+
+    var tree = d3cision()
+      .sep(0)
+      .shape(1);
+
+    d3.select("#container5")
+      .datum(data)
+      .call(tree);
+
+  });
+
+
 
   console.log("finished")
 
