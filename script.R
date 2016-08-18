@@ -1,12 +1,14 @@
 rm(list = ls())
 library(rpart)
 library(partykit)
+library(RWeka)
 library(jsonlite)
 library(magrittr)
 library(purrr)
 library(broom)
 library(stringr)
 library(dplyr)
+
 # http://stackoverflow.com/questions/34196611/converting-rpart-output-into-json-format-in-r
 
 # json_prsr <- function(tree, node = 1, node_stats = NULL){
@@ -178,12 +180,6 @@ ttnc <- as.data.frame(Titanic)
 ttnc <- ttnc[rep(1:nrow(ttnc), ttnc$Freq), 1:4]
 names(ttnc)[2] <- "Gender"
 
-# j48 <- J48(Survived ~ ., data = ttnc)
-# plot(j48)
-# 
-# tree <- as.party(j48)
-# plot(tree)
-
 tree <- ctree(Survived ~ ., data = ttnc)
 plot(tree)
 
@@ -191,5 +187,17 @@ tree %>%
   tree_list() %>%
   toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
   writeLines(con = "data5.json")
+
+# EXAMPLE 6 ---------------------------------------------------------------
+j48 <- J48(Survived ~ ., data = ttnc)
+plot(j48)
+
+tree <- as.party(j48)
+plot(tree)
+
+tree %>%
+  tree_list() %>%
+  toJSON(auto_unbox = TRUE, pretty = TRUE) %>%
+  writeLines(con = "data6.json")
 
 

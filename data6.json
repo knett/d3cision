@@ -1,0 +1,302 @@
+{
+  "name": 1,
+  "size": 2201,
+  "depth": 3,
+  "rule": "",
+  "completerule": "",
+  "terminal": false,
+  "nchildren": 14,
+  "summary": [
+    {
+      "class": "No",
+      "n": 1490
+    },
+    {
+      "class": "Yes",
+      "n": 711
+    }
+  ],
+  "childrensid": [2, 11],
+  "children": [
+    {
+      "name": 2,
+      "size": 1731,
+      "depth": 2,
+      "rule": "Gender in (Male)",
+      "completerule": "Gender %in% c(\"Male\")",
+      "terminal": false,
+      "nchildren": 8,
+      "summary": [
+        {
+          "class": "No",
+          "n": 1364
+        },
+        {
+          "class": "Yes",
+          "n": 367
+        }
+      ],
+      "childrensid": [3, 6, 9, 10],
+      "children": [
+        {
+          "name": 3,
+          "size": 180,
+          "depth": 1,
+          "rule": "Class in (1st)",
+          "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"1st\")",
+          "terminal": false,
+          "nchildren": 2,
+          "summary": [
+            {
+              "class": "No",
+              "n": 118
+            },
+            {
+              "class": "Yes",
+              "n": 62
+            }
+          ],
+          "childrensid": [4, 5],
+          "children": [
+            {
+              "name": 4,
+              "size": 5,
+              "depth": 0,
+              "rule": "Age in (Child)",
+              "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"1st\") & Age %in% c(\"Child\")",
+              "terminal": true,
+              "nchildren": 0,
+              "summary": [
+                {
+                  "class": "Yes",
+                  "n": 5
+                }
+              ],
+              "side": "left"
+            },
+            {
+              "name": 5,
+              "size": 175,
+              "depth": 0,
+              "rule": "Age in (Adult)",
+              "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"1st\") & Age %in% c(\"Adult\")",
+              "terminal": true,
+              "nchildren": 0,
+              "summary": [
+                {
+                  "class": "No",
+                  "n": 118
+                },
+                {
+                  "class": "Yes",
+                  "n": 57
+                }
+              ],
+              "side": "right"
+            }
+          ],
+          "side": "left"
+        },
+        {
+          "name": 6,
+          "size": 179,
+          "depth": 1,
+          "rule": "Class in (2nd)",
+          "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"2nd\")",
+          "terminal": false,
+          "nchildren": 2,
+          "summary": [
+            {
+              "class": "No",
+              "n": 154
+            },
+            {
+              "class": "Yes",
+              "n": 25
+            }
+          ],
+          "childrensid": [7, 8],
+          "children": [
+            {
+              "name": 7,
+              "size": 11,
+              "depth": 0,
+              "rule": "Age in (Child)",
+              "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"2nd\") & Age %in% c(\"Child\")",
+              "terminal": true,
+              "nchildren": 0,
+              "summary": [
+                {
+                  "class": "Yes",
+                  "n": 11
+                }
+              ],
+              "side": "left"
+            },
+            {
+              "name": 8,
+              "size": 168,
+              "depth": 0,
+              "rule": "Age in (Adult)",
+              "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"2nd\") & Age %in% c(\"Adult\")",
+              "terminal": true,
+              "nchildren": 0,
+              "summary": [
+                {
+                  "class": "No",
+                  "n": 154
+                },
+                {
+                  "class": "Yes",
+                  "n": 14
+                }
+              ],
+              "side": "right"
+            }
+          ],
+          "side": "right"
+        },
+        {
+          "name": 9,
+          "size": 510,
+          "depth": 0,
+          "rule": "Class in (3rd)",
+          "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"3rd\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 422
+            },
+            {
+              "class": "Yes",
+              "n": 88
+            }
+          ]
+        },
+        {
+          "name": 10,
+          "size": 862,
+          "depth": 0,
+          "rule": "Class in (Crew)",
+          "completerule": "Gender %in% c(\"Male\") & Class %in% c(\"Crew\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 670
+            },
+            {
+              "class": "Yes",
+              "n": 192
+            }
+          ]
+        }
+      ],
+      "side": "left"
+    },
+    {
+      "name": 11,
+      "size": 470,
+      "depth": 1,
+      "rule": "Gender in (Female)",
+      "completerule": "Gender %in% c(\"Female\")",
+      "terminal": false,
+      "nchildren": 4,
+      "summary": [
+        {
+          "class": "No",
+          "n": 126
+        },
+        {
+          "class": "Yes",
+          "n": 344
+        }
+      ],
+      "childrensid": [12, 13, 14, 15],
+      "children": [
+        {
+          "name": 12,
+          "size": 145,
+          "depth": 0,
+          "rule": "Class in (1st)",
+          "completerule": "Gender %in% c(\"Female\") & Class %in% c(\"1st\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 4
+            },
+            {
+              "class": "Yes",
+              "n": 141
+            }
+          ],
+          "side": "left"
+        },
+        {
+          "name": 13,
+          "size": 106,
+          "depth": 0,
+          "rule": "Class in (2nd)",
+          "completerule": "Gender %in% c(\"Female\") & Class %in% c(\"2nd\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 13
+            },
+            {
+              "class": "Yes",
+              "n": 93
+            }
+          ],
+          "side": "right"
+        },
+        {
+          "name": 14,
+          "size": 196,
+          "depth": 0,
+          "rule": "Class in (3rd)",
+          "completerule": "Gender %in% c(\"Female\") & Class %in% c(\"3rd\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 106
+            },
+            {
+              "class": "Yes",
+              "n": 90
+            }
+          ]
+        },
+        {
+          "name": 15,
+          "size": 23,
+          "depth": 0,
+          "rule": "Class in (Crew)",
+          "completerule": "Gender %in% c(\"Female\") & Class %in% c(\"Crew\")",
+          "terminal": true,
+          "nchildren": 0,
+          "summary": [
+            {
+              "class": "No",
+              "n": 3
+            },
+            {
+              "class": "Yes",
+              "n": 20
+            }
+          ]
+        }
+      ],
+      "side": "right"
+    }
+  ]
+}

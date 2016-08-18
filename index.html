@@ -7,93 +7,101 @@
   width: 1000px;
   height: 600px;
 }
-
 .d3cision-node-text {
   font-family: 'Roboto', sans-serif;
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
 }
-
 </style>
 
 <body>
 
-<div class="container" id="container1"></div>
-<div class="container" id="container2"></div>
-<div class="container" id="container3"></div>
-<div class="container" id="container4"></div>
-<div class="container" id="container5"></div>
+  <div class="container" id="container1"></div>
+  <div class="container" id="container2"></div>
+  <div class="container" id="container3"></div>
+  <div class="container" id="container4"></div>
+  <div class="container" id="container5"></div>
+  <div class="container" id="container6"></div>
 
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="https://rawgit.com/jgoodall/d3-colorlegend/master/colorlegend.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://rawgit.com/jgoodall/d3-colorlegend/master/colorlegend.js"></script>
 
-<script src="d3cision.js"></script>
-<script>
-  console.log("ready")
+  <script src="d3cision.js"></script>
+  <script>
+    console.log("ready")
 
-  var colors = ["#000004FF", "#180F3EFF", "#451077FF", "#721F81FF", "#9F2F7FFF",
-                 "#CD4071FF", "#F1605DFF", "#FD9567FF", "#FEC98DFF", "#FCFDBFFF"];
+    var colors = ["#000004FF", "#180F3EFF", "#451077FF", "#721F81FF", "#9F2F7FFF",
+                   "#CD4071FF", "#F1605DFF", "#FD9567FF", "#FEC98DFF", "#FCFDBFFF"];
 
-  d3.json("data4.json", function(data) {
+    d3.json("data4.json", function(data) {
 
-    var tree = d3cision()
-      .debug(true)
+      var tree = d3cision()
+        .debug(true)
 
-    d3.select("#container1")
-      .datum(data)
-      .call(tree);
-  });
+      d3.select("#container1")
+        .datum(data)
+        .call(tree);
+    });
 
-  d3.json("data5.json", function(data) {
+    d3.json("data5.json", function(data) {
 
-    var tree = d3cision()
-    .secondarycolor("#f0f0f0");
+      var tree = d3cision()
+      .secondarycolor("#f0f0f0");
 
-    d3.select("#container2")
-      .datum(data)
-      .call(tree);
+      d3.select("#container2")
+        .datum(data)
+        .call(tree);
 
-  });
+    });
 
-  d3.json("data2.json", function(data) {
+    d3.json("data6.json", function(data) {
 
-    var tree = d3cision()
-      .secondarycolor("#f0f0f0")
-      .textcolor("#212121")
-      .accentcolor("#b71c1c");
+      var tree = d3cision()
+      .secondarycolor("#f0f0f0");
 
-    d3.select("#container3")
-      .datum(data)
-      .call(tree);
+      d3.select("#container3")
+        .datum(data)
+        .call(tree);
 
-  });
+    });
 
-  d3.json("data1.json", function(data) {
+    d3.json("data2.json", function(data) {
 
-    var tree = d3cision()
-      .sep(5)
-      .shape(0);
+      var tree = d3cision()
+        .secondarycolor("#f0f0f0")
+        .textcolor("#212121")
+        .accentcolor("#b71c1c");
 
-    d3.select("#container4")
-      .datum(data)
-      .call(tree);
+      d3.select("#container4")
+        .datum(data)
+        .call(tree);
 
-  });
+    });
 
-  d3.json("data3.json", function(data) {
+    d3.json("data1.json", function(data) {
 
-    var tree = d3cision()
-      .sep(0)
-      .shape(1);
+      var tree = d3cision()
+        .sep(5)
+        .shape(0);
 
-    d3.select("#container5")
-      .datum(data)
-      .call(tree);
+      d3.select("#container5")
+        .datum(data)
+        .call(tree);
 
-  });
+    });
 
+    d3.json("data3.json", function(data) {
 
+      var tree = d3cision()
+        .sep(0)
+        .shape(1);
 
-  console.log("finished")
+      d3.select("#container6")
+        .datum(data)
+        .call(tree);
 
-</script>
+    });
+
+    console.log("finished")
+
+  </script>
 </body>
