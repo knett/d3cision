@@ -55,8 +55,7 @@ The usual recursive structure. Like the ultra know flare.json:
 - [A Visual Introduction to Machine Learning][1]
 - [`rpart/ctree` to json format][2].
 - [d3noob’s Block Simple d3.js tooltips][3].
-- [Using a D3 Voronoi grid to improve a chart's interactive experience][5]
- + [d3-distanceLimitedVoronoi][4]
+- [Using a D3 Voronoi grid to improve a chart's interactive experience][5] and [d3-distanceLimitedVoronoi][4]
 
 
 [1]: http://www.r2d3.us/visual-intro-to-machine-learning-part-1/
