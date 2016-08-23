@@ -54,6 +54,21 @@ function d3cision() {
         .data(nodes.descendants().slice(1))
         .enter();
 
+      var limitedVoronoi = d3.distanceLimitedVoronoi()
+        .x(function(d){ return d.x; })                                     // set the x accessor (as in d3.voronoi)
+        .y(function(d){ return d.y; })              // set the y accessor (as in d3.voronoi)
+        .limit(75)                                  // set the maximum distance
+      var limitedCells = limitedVoronoi(treemap(nodes).descendants())
+
+      g.selectAll("interactive-region")
+        .data(limitedCells)
+        .enter()
+          .append("path")
+            .attr("d", function(d) { return d.path; })
+            .attr("fill", "#f0f0f0")
+            .on('mouseenter', function(d){ console.log("in", d.datum.data.name); })
+            .on('mouseout', function(d){ console.log("out", d.datum.data.name);; })
+
       // the invisible rects
       var boxs = links
         .append("rect")
@@ -197,9 +212,11 @@ function d3cision() {
           .attr("fill", secondarycolor);
       }
 
+      /*
       boxs
         .on('mouseover', mouseover)
         .on('mouseout', mouseout);
+        */
       // link2.on('mouseout', mouseout);
       // rects.on('mouseover', mouseover);
 
