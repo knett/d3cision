@@ -55,8 +55,12 @@ The usual recursive structure. Like the ultra know flare.json:
 - [A Visual Introduction to Machine Learning][1]
 - [`rpart/ctree` to json format][2].
 - [d3noob’s Block Simple d3.js tooltips][3].
+- [Using a D3 Voronoi grid to improve a chart's interactive experience][5]
+ + [d3-distanceLimitedVoronoi][4]
 
 
 [1]: http://www.r2d3.us/visual-intro-to-machine-learning-part-1/
 [2]: http://stackoverflow.com/questions/34196611/converting-rpart-output-into-json-format-in-r
 [3]: http://bl.ocks.org/d3noob/a22c42db65eb00d4e369
+[4]: https://github.com/Kcnarf/d3-distanceLimitedVoronoi
+[5]: http://www.visualcinnamon.com/2015/07/voronoi.html
