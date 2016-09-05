@@ -67,7 +67,9 @@ function d3cision() {
             .attr("d", function(d) { return d.path; })
             .attr("fill", "#f0f0f0")
             .on('mouseenter', function(d){ console.log("in", d.datum.data.name); })
-            .on('mouseout', function(d){ console.log("out", d.datum.data.name);; })
+            .on('mouseout', function(d){ console.log("out", d.datum.data.name); })
+			.on('mouseover', mouseover)
+			.on('mouseout', mouseout);
 
       // the invisible rects
       var boxs = links
@@ -185,29 +187,29 @@ function d3cision() {
 
       function mouseover(d) {
 
-        d3.selectAll(".d3cisionid-link-external[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll(".d3cisionid-link-external[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
           .transition().duration(transitiontime)
           .attr("stroke", accentcolor);
 
-        d3.selectAll(".d3cisionid-link-internal[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll(".d3cisionid-link-internal[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
             .transition().duration(transitiontime)
             .attr("stroke", accentcolor);
 
-        d3.selectAll("text[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll("text[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
             .transition().duration(transitiontime)
             .attr("fill", accentcolor);
       }
 
       function mouseout(d) {
-        d3.selectAll(".d3cisionid-link-external[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll(".d3cisionid-link-external[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
           .transition().duration(transitiontime)
           .attr("stroke", secondarycolor);
 
-        d3.selectAll(".d3cisionid-link-internal[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll(".d3cisionid-link-internal[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
           .transition().duration(transitiontime)
           .attr("stroke", primarycolor);
 
-        d3.selectAll("text[d3cisionid='" + d3cisionid + "'][nodeid='" + d.data.name + "']")
+        d3.selectAll("text[d3cisionid='" + d3cisionid + "'][nodeid='" + d.datum.data.name + "']")
           .transition().duration(transitiontime)
           .attr("fill", secondarycolor);
       }
